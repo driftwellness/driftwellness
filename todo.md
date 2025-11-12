@@ -66,3 +66,12 @@
 ## Design Changes
 - [x] Update theme to lighter, ocean-blue aesthetic (more daylight, less dark)
 - [x] Adjust colors for calmer, more serene feel
+
+## New Feature Requests
+- [x] Add ocean wave video background to hero section
+- [ ] Implement gamification/level system with XP for activities
+- [ ] Create milestone rewards (Level 5, 10, 14, 20, 30)
+- [ ] Build progress tracking and badge system
+- [ ] Add address collection for physical gift delivery at Level 14
+- [ ] Create "Level Up!" animation and notifications
+- [ ] Design user profile page showing level and progress
