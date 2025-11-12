@@ -62,3 +62,7 @@
 - [ ] Set up custom domain
 - [ ] Configure analytics
 - [ ] Launch!
+
+## Design Changes
+- [x] Update theme to lighter, ocean-blue aesthetic (more daylight, less dark)
+- [x] Adjust colors for calmer, more serene feel
