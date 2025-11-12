@@ -18,12 +18,12 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-25"
+            className="absolute inset-0 w-full h-full object-cover opacity-50"
           >
             <source src="/ocean-waves.mp4" type="video/mp4" />
           </video>
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
         </div>
         
         {/* Floating elements */}

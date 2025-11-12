@@ -75,3 +75,6 @@
 - [ ] Add address collection for physical gift delivery at Level 14
 - [ ] Create "Level Up!" animation and notifications
 - [ ] Design user profile page showing level and progress
+
+## Design Adjustments
+- [x] Increase ocean wave video visibility (make it more prominent)
