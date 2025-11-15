@@ -3,9 +3,9 @@
 ## Phase 1: Core Infrastructure
 - [x] Initialize project with database and authentication
 - [x] Set up database schema
-- [ ] Design main app layout and navigation
+- [x] Design main app layout and navigation
 - [x] Implement Drift branding (colors, logo, typography)
-- [x] Create landing/home page
+- [x] Create landing/home page with ocean video background
 
 ## Phase 2: Audiobook Player
 - [ ] Design audiobook player UI
@@ -78,3 +78,26 @@
 
 ## Design Adjustments
 - [x] Increase ocean wave video visibility (make it more prominent)
+
+## Audiobook Voice Production
+- [x] Generate Chapter 1 audio with deep, calm male AI voice
+- [x] Generate Chapter 2 audio with deep, calm male AI voice
+- [x] Generate Chapter 3 audio with deep, calm male AI voice
+- [x] Generate Chapter 4 audio with deep, calm male AI voice
+- [x] Generate Chapter 5 audio with deep, calm male AI voice
+
+## CURRENT PRIORITY: Complete all app features before marketing
+User wants to see fully functional app before moving to marketing phase.
+
+Focus areas:
+1. Complete audiobook player with all 5 chapters
+2. Build gamification system (XP, levels, badges, prizes)
+3. Implement journal with AI dream analysis
+4. Create advent calendar with 24 doors
+5. Build real-time soundscape mixer
+6. Add sleep music library
+7. Implement AI personalization (daily check-in)
+8. Set up membership system with Shopify integration
+
+## Audiobook Player Enhancements
+- [x] Add playback speed control (0.5x, 0.75x, 1x, 1.25x, 1.5x)
