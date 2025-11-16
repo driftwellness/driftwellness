@@ -111,3 +111,27 @@ Focus areas:
 - [x] Update all pages with new warm, spa-like atmosphere
 - [x] Ensure design appeals to global audience (not just Nordic)
 - [x] Maintain all existing functionality while updating visual design
+
+## Interactive Video Preview Popups
+- [ ] Generate evening stretch/yoga sunset wellness scene images
+- [ ] Create elegant popup modal component with video/image preview
+- [ ] Add popup triggers to feature cards on homepage
+- [ ] Design popup with aspirational yet relatable aesthetic
+- [ ] Include call-to-action buttons in popups
+- [ ] Test popup functionality and user flow
+
+## App Icon Design
+- [x] Generate Egyptian-luxury inspired icon concepts (lotus + pyramids + ancient aesthetics)
+- [x] Create final combined icon (Pyramid + Ankh + Lotus)
+- [x] Update app logo constant to use new icon
+- [ ] Update favicon in app (user must do this in Management UI Settings)
+
+## Legal & Business Setup (Low-Cost Priority)
+- [ ] Check if "Drift" trademark is available in Norway, USA, EU (user will do with guidance)
+- [x] Create Privacy Policy (GDPR-compliant)
+- [x] Create Terms of Service
+- [x] Create Cookie Policy
+- [ ] Register domain name (drift.no, drift.com, or driftapp.com) - LATER
+- [ ] Register business entity (ENK or AS) - LATER
+- [ ] Set up Apple Developer Account ($99/year) - LATER
+- [ ] Set up Google Play Developer Account ($25 one-time) - LATER
