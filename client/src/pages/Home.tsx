@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { APP_TITLE, getLoginUrl } from "@/const";
 import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
@@ -11,19 +12,14 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Ocean wave video background */}
+        {/* Warm sunset background */}
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-50"
-          >
-            <source src="/ocean-waves.mp4" type="video/mp4" />
-          </video>
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
+          <div 
+            className="absolute inset-0 w-full h-full bg-cover bg-center"
+            style={{ backgroundImage: 'url(/sunset-bg.jpg)' }}
+          />
+          {/* Warm overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/60" />
         </div>
         
         {/* Floating elements */}
@@ -34,19 +30,19 @@ export default function Home() {
 
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/30">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/20 text-accent border border-accent/40">
               <Sparkles className="w-4 h-4" />
-              <span className="text-sm font-medium">Your wellness journey starts here</span>
+              <span className="text-sm font-medium tracking-wide">Your sanctuary of serenity awaits</span>
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
-              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 Drift
               </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Find your stillness. A sanctuary for mindfulness, rest, and self-care in your pocket.
+              Embrace tranquility. A luxurious sanctuary for mindfulness, restoration, and self-discovery.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -87,30 +83,41 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Everything you need to{" "}
-              <span className="text-accent">find peace</span>
+              <span className="text-accent">discover inner peace</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Drift combines guided meditations, AI-powered personalization, and calming soundscapes
+              Drift blends guided wisdom, intelligent personalization, and serene soundscapes in perfect harmony
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {features.map((feature, idx) => (
-              <Card 
-                key={idx}
-                className="group bg-card/50 backdrop-blur border-border/50 hover:border-accent/50 transition-all hover:shadow-lg hover:shadow-accent/5"
-              >
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            {features.map((feature, idx) => {
+              const cardContent = (
+                <Card 
+                  className="group bg-card/50 backdrop-blur border-border/50 hover:border-accent/50 transition-all hover:shadow-lg hover:shadow-accent/5 h-full cursor-pointer"
+                >
+                  <CardContent className="p-6 space-y-4">
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold">{feature.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+              
+              return feature.link ? (
+                <Link key={idx} href={feature.link} className="block">
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={idx}>
+                  {cardContent}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -121,10 +128,10 @@ export default function Home() {
           <Card className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 border-accent/20">
             <CardContent className="p-12 text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold">
-                Ready to drift into calm?
+                Ready to embrace serenity?
               </h2>
               <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                Join thousands finding their daily moment of peace
+                Join a global community discovering their path to inner tranquility
               </p>
               <Button 
                 size="lg" 
@@ -153,30 +160,36 @@ const features = [
     icon: <Headphones className="w-6 h-6" />,
     title: "Guided Audiobook",
     description: "5 chapters of mindfulness teachings, breathwork, and self-care practices narrated with a calming voice.",
+    link: "/audiobook",
   },
   {
     icon: <BookOpen className="w-6 h-6" />,
     title: "Private Journal",
     description: "A safe space to write your thoughts, dreams, and reflections. Powered by AI dream analysis.",
+    link: null,
   },
   {
     icon: <Calendar className="w-6 h-6" />,
     title: "Advent Calendar",
     description: "Daily wellness gifts throughout December. Meditations, exercises, and a chance to win premium prizes.",
+    link: null,
   },
   {
     icon: <Waves className="w-6 h-6" />,
     title: "Real-time Soundscapes",
     description: "Mix your perfect ambient sound. Control rain, ocean waves, wind, and birdsong to create your sanctuary.",
+    link: null,
   },
   {
     icon: <Sparkles className="w-6 h-6" />,
     title: "AI Personalization",
     description: "Daily check-ins adapt content to your mood. Get personalized meditation and exercise recommendations.",
+    link: null,
   },
   {
     icon: <Headphones className="w-6 h-6" />,
     title: "Sleep Music Library",
     description: "Curated music for deep rest. Includes special sections for babies and children.",
+    link: null,
   },
 ];

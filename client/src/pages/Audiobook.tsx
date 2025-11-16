@@ -129,29 +129,29 @@ export default function Audiobook() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 via-blue-50 to-sand-50">
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-ocean-600 via-ocean-500 to-gold-500 bg-clip-text text-transparent mb-4">
-            Audiobook
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
+            Guided Audiobook
           </h1>
-          <p className="text-ocean-700 text-lg">
-            Five chapters to guide you toward inner peace
+          <p className="text-muted-foreground text-lg">
+            Five chapters to guide you toward inner tranquility
           </p>
         </div>
 
         {/* Player Card */}
-        <Card className="max-w-2xl mx-auto p-8 bg-white/80 backdrop-blur-sm shadow-xl">
+        <Card className="max-w-2xl mx-auto p-8 bg-card/90 backdrop-blur-sm shadow-xl border-accent/20">
           {/* Current Chapter Info */}
           <div className="text-center mb-8">
-            <div className="text-sm text-ocean-600 font-medium mb-2">
+            <div className="text-sm text-accent font-medium mb-2 tracking-wide">
               Chapter {chapters[currentChapter].id}
             </div>
-            <h2 className="text-3xl font-bold text-ocean-800 mb-2">
+            <h2 className="text-3xl font-bold text-foreground mb-2">
               {chapters[currentChapter].title}
             </h2>
-            <p className="text-ocean-600">
+            <p className="text-muted-foreground">
               {chapters[currentChapter].subtitle}
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function Audiobook() {
               onValueChange={handleSeek}
               className="mb-2"
             />
-            <div className="flex justify-between text-sm text-ocean-600">
+            <div className="flex justify-between text-sm text-muted-foreground">
               <span>{formatTime(currentTime)}</span>
               <span>{formatTime(duration)}</span>
             </div>
@@ -185,7 +185,7 @@ export default function Audiobook() {
               size="icon"
               onClick={skipBackward}
               disabled={currentChapter === 0}
-              className="text-ocean-600 hover:text-ocean-800"
+              className="text-primary hover:text-accent"
             >
               <SkipBack className="h-6 w-6" />
             </Button>
@@ -193,7 +193,7 @@ export default function Audiobook() {
             <Button
               size="icon"
               onClick={togglePlay}
-              className="h-16 w-16 rounded-full bg-gradient-to-r from-ocean-500 to-ocean-600 hover:from-ocean-600 hover:to-ocean-700 shadow-lg"
+              className="h-16 w-16 rounded-full bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary shadow-lg"
             >
               {isPlaying ? (
                 <Pause className="h-8 w-8" />
@@ -207,7 +207,7 @@ export default function Audiobook() {
               size="icon"
               onClick={skipForward}
               disabled={currentChapter === chapters.length - 1}
-              className="text-ocean-600 hover:text-ocean-800"
+              className="text-primary hover:text-accent"
             >
               <SkipForward className="h-6 w-6" />
             </Button>
@@ -215,7 +215,7 @@ export default function Audiobook() {
 
           {/* Playback Speed Control */}
           <div className="mb-6">
-            <div className="text-sm font-medium text-ocean-700 mb-3">
+            <div className="text-sm font-medium text-foreground mb-3">
               Playback Speed
             </div>
             <div className="flex gap-2">
@@ -225,7 +225,7 @@ export default function Audiobook() {
                   variant={playbackRate === rate ? "default" : "outline"}
                   size="sm"
                   onClick={() => handlePlaybackRateChange(rate)}
-                  className={playbackRate === rate ? "bg-ocean-500 hover:bg-ocean-600" : ""}
+                  className={playbackRate === rate ? "bg-primary hover:bg-primary/90" : ""}
                 >
                   {rate}x
                 </Button>
@@ -235,7 +235,7 @@ export default function Audiobook() {
 
           {/* Volume Control */}
           <div className="flex items-center gap-3 mb-8">
-            <Volume2 className="h-5 w-5 text-ocean-600" />
+            <Volume2 className="h-5 w-5 text-muted-foreground" />
             <Slider
               value={[volume]}
               max={1}
@@ -247,7 +247,7 @@ export default function Audiobook() {
 
           {/* Chapter List */}
           <div className="space-y-2">
-            <div className="text-sm font-medium text-ocean-700 mb-3">
+            <div className="text-sm font-medium text-foreground mb-3">
               All Chapters
             </div>
             {chapters.map((chapter, index) => (
@@ -259,23 +259,23 @@ export default function Audiobook() {
                 }}
                 className={`w-full text-left p-4 rounded-lg transition-all ${
                   index === currentChapter
-                    ? "bg-ocean-100 border-2 border-ocean-400"
-                    : "bg-sand-50 hover:bg-sand-100 border-2 border-transparent"
+                    ? "bg-accent/20 border-2 border-accent"
+                    : "bg-muted/30 hover:bg-muted/50 border-2 border-transparent"
                 }`}
               >
                 <div className="flex justify-between items-start">
                   <div>
-                    <div className="text-sm text-ocean-600 font-medium">
+                    <div className="text-sm text-accent font-medium">
                       Chapter {chapter.id}
                     </div>
-                    <div className="font-semibold text-ocean-800">
+                    <div className="font-semibold text-foreground">
                       {chapter.title}
                     </div>
-                    <div className="text-sm text-ocean-600">
+                    <div className="text-sm text-muted-foreground">
                       {chapter.subtitle}
                     </div>
                   </div>
-                  <div className="text-sm text-ocean-600">{chapter.duration}</div>
+                  <div className="text-sm text-muted-foreground">{chapter.duration}</div>
                 </div>
               </button>
             ))}
