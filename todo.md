@@ -135,3 +135,20 @@ Focus areas:
 - [ ] Register business entity (ENK or AS) - LATER
 - [ ] Set up Apple Developer Account ($99/year) - LATER
 - [ ] Set up Google Play Developer Account ($25 one-time) - LATER
+
+## Stripe Payment Integration
+- [x] Add Stripe feature to project
+- [x] Create database schema for subscriptions
+- [x] Create subscription pricing plans (99 kr/month, 990 kr/year)
+- [ ] Build pricing/subscription page
+- [ ] Implement payment checkout flow
+- [ ] Create Stripe webhook handler
+- [ ] Add subscription management to user dashboard
+- [ ] Test payment flow end-to-end
+- [ ] Guide user through Stripe account setup
+
+## Navigation & UX Improvements (Free)
+- [x] Add "Back to Home" button on Audiobook page
+- [x] Add consistent header/navigation across all pages
+- [x] Improve mobile responsiveness
+- [x] Test all navigation flows

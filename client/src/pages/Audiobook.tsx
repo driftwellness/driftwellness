@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Play, Pause, SkipBack, SkipForward, Volume2 } from "lucide-react";
+import { Play, Pause, SkipBack, SkipForward, Volume2, ArrowLeft } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { Link } from "wouter";
 
 const chapters = [
   {
@@ -131,6 +132,14 @@ export default function Audiobook() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12">
+        {/* Back Button */}
+        <Link href="/">
+          <Button variant="ghost" className="mb-8 text-muted-foreground hover:text-foreground">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Home
+          </Button>
+        </Link>
+        
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
