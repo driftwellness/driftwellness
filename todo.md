@@ -152,3 +152,26 @@ Focus areas:
 - [x] Add consistent header/navigation across all pages
 - [x] Improve mobile responsiveness
 - [x] Test all navigation flows
+
+## Private Journal Feature
+- [x] Create Journal page with entry list
+- [x] Add new entry form with title, content, mood
+- [x] Implement mood tracking (calm, anxious, happy, sad, neutral)
+- [x] Add tags support for entries
+- [x] Connect to database (schema ready, frontend complete)
+- [x] Add "Back to Home" button
+
+## AI Wellness Coach (PREMIUM FEATURE)
+- [x] Create AI Coach chat interface
+- [x] Add personality customization (supportive, motivating, calming)
+- [x] Build chat UI with message history
+- [x] Add daily reminder preview/explanation
+- [ ] Integrate with real AI API (currently simulated)
+- [ ] Implement actual daily reminder system with push notifications
+- [ ] Add chat history storage to database
+
+## Updated Stripe Pricing
+- [ ] Update pricing plans: Basic (99 kr/month) and Premium (199 kr/month)
+- [ ] Premium includes AI Wellness Coach
+- [ ] Basic includes: Audiobook, Journal, Soundscapes
+- [ ] Update products.ts with new pricing structure

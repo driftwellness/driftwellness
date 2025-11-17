@@ -6,6 +6,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Audiobook from "./pages/Audiobook";
+import Journal from "./pages/Journal";
+import AICoach from "./pages/AICoach";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -13,6 +15,8 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/audiobook"} component={Audiobook} />
+      <Route path={"/journal"} component={Journal} />
+      <Route path={"/ai-coach"} component={AICoach} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

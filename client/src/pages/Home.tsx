@@ -166,7 +166,7 @@ const features = [
     icon: <BookOpen className="w-6 h-6" />,
     title: "Private Journal",
     description: "A safe space to write your thoughts, dreams, and reflections. Powered by AI dream analysis.",
-    link: null,
+    link: "/journal",
   },
   {
     icon: <Calendar className="w-6 h-6" />,
@@ -182,9 +182,9 @@ const features = [
   },
   {
     icon: <Sparkles className="w-6 h-6" />,
-    title: "AI Personalization",
-    description: "Daily check-ins adapt content to your mood. Get personalized meditation and exercise recommendations.",
-    link: null,
+    title: "AI Wellness Coach",
+    description: "Your personal AI guide. Chat anytime, get daily reminders, and receive personalized wellness recommendations.",
+    link: "/ai-coach",
   },
   {
     icon: <Headphones className="w-6 h-6" />,
