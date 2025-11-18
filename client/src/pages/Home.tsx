@@ -2,7 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { APP_TITLE, getLoginUrl } from "@/const";
-import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight } from "lucide-react";
+import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight, Gift } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -133,13 +133,21 @@ export default function Home() {
               <p className="text-lg text-muted-foreground max-w-xl mx-auto">
                 Join a global community discovering their path to inner tranquility
               </p>
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                onClick={() => window.location.href = getLoginUrl()}
-              >
-                Start Your Free Journey
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                  onClick={() => window.location.href = getLoginUrl()}
+                >
+                  Start Your Free Journey
+                </Button>
+                <Link href="/gift-card">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                    <Gift className="mr-2 h-4 w-4" />
+                    Buy Gift Card
+                  </Button>
+                </Link>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -172,7 +180,7 @@ const features = [
     icon: <Calendar className="w-6 h-6" />,
     title: "Advent Calendar",
     description: "Daily wellness gifts throughout December. Meditations, exercises, and a chance to win premium prizes.",
-    link: null,
+    link: "/advent-calendar",
   },
   {
     icon: <Waves className="w-6 h-6" />,

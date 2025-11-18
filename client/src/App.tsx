@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Audiobook from "./pages/Audiobook";
 import Journal from "./pages/Journal";
 import AICoach from "./pages/AICoach";
+import AdventCalendar from "./pages/AdventCalendar";
+import GiftCard from "./pages/GiftCard";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -17,6 +19,8 @@ function Router() {
       <Route path={"/audiobook"} component={Audiobook} />
       <Route path={"/journal"} component={Journal} />
       <Route path={"/ai-coach"} component={AICoach} />
+      <Route path={"/advent-calendar"} component={AdventCalendar} />
+      <Route path={"/gift-card"} component={GiftCard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

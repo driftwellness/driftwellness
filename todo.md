@@ -175,3 +175,23 @@ Focus areas:
 - [ ] Premium includes AI Wellness Coach
 - [ ] Basic includes: Audiobook, Journal, Soundscapes
 - [ ] Update products.ts with new pricing structure
+
+## Advent Calendar Feature
+- [x] Generate luxury Victorian-style advent calendar image
+- [x] Create Advent Calendar page with 24 doors (1-24 December)
+- [x] Define daily prizes for each door
+- [x] Show grand prize for December 24th (5,000+ kr value)
+- [x] Lock future dates, unlock current/past dates
+- [x] Display prize details when door is opened
+- [x] Add route and link from home page
+
+## Gift Card System
+- [x] Create gift card purchase page
+- [x] Offer 1-month (199 kr) and 1-year (1990 kr) gift cards
+- [x] Gift card form with recipient details and personal message
+- [x] Create gift code redemption section
+- [x] Add gift card link to home page CTA
+- [ ] Connect to Stripe for payment (requires Stripe setup)
+- [ ] Generate unique gift codes (backend integration)
+- [ ] Email gift code to recipient (backend integration)
+- [ ] Store gift cards in database (backend integration)
