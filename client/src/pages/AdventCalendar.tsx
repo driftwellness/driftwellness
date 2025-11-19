@@ -100,9 +100,15 @@ export default function AdventCalendar() {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4">
-            <Gift className="h-8 w-8 text-accent" />
+          {/* Christmas Calendar Image */}
+          <div className="max-w-md mx-auto mb-8">
+            <img
+              src="/christmas-calendar-custom.png"
+              alt="Luxury Christmas Advent Calendar"
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
           </div>
+          
           <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
             Advent Calendar
           </h1>
