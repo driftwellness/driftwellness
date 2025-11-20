@@ -259,6 +259,18 @@ export default function Shop() {
         </div>
       </header>
 
+      {/* Launch Date Banner */}
+      <section className="bg-gradient-to-r from-[#8B4049] via-[#C97C5D] to-[#D4AF37] py-4">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-white font-semibold text-lg sm:text-xl">
+            🎉 Grand Opening: <span className="font-bold">January 1st, 2026</span> ✨
+          </p>
+          <p className="text-white/90 text-sm mt-1">
+            Browse our collection now - Shopping opens New Year's Day!
+          </p>
+        </div>
+      </section>
+
       {/* Video Hero Section */}
       <section className="relative h-[60vh] sm:h-[70vh] overflow-hidden">
         {/* Video Background */}
@@ -350,10 +362,11 @@ export default function Shop() {
                       {formatPrice(product.price)}
                     </span>
                     <Button
-                      onClick={() => addToCart(product.id)}
-                      className="bg-[#8B4049] hover:bg-[#8B4049]/90 text-white"
+                      disabled
+                      className="bg-[#8B4049]/50 text-white cursor-not-allowed"
+                      title="Available January 1st, 2026"
                     >
-                      Add to Cart
+                      Coming Jan 1st
                     </Button>
                   </div>
                 </CardContent>

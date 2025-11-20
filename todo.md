@@ -291,3 +291,10 @@ Focus areas:
 - [ ] Add Amara to Pricing page
 - [x] Translate entire app to English (all pages, buttons, forms - changed kr to NOK)
 - [ ] Set up language switcher system for future multi-language support
+
+## Shop Launch Preparation
+- [x] Add "Launching January 1st" banner to Shop page
+- [x] Update product availability messaging (disabled Add to Cart buttons)
+- [x] Update Home page Shop button with launch date
+- [ ] Add pre-order or waitlist functionality (optional)
+- [ ] Save checkpoint with launch date updates

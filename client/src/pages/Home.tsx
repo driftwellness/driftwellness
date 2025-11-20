@@ -55,7 +55,7 @@ export default function Home() {
                   <Link href="/shop">
                     <Button size="lg" variant="outline" className="gap-2">
                       <ShoppingBag className="w-5 h-5" />
-                      Explore Shop
+                      Shop (Opens Jan 1st)
                     </Button>
                   </Link>
                 </>
@@ -71,7 +71,7 @@ export default function Home() {
                   <Link href="/shop">
                     <Button size="lg" variant="outline" className="gap-2">
                       <ShoppingBag className="w-5 h-5" />
-                      Explore Shop
+                      Shop (Opens Jan 1st)
                     </Button>
                   </Link>
                 </>
