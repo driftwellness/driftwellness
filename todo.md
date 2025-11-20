@@ -298,3 +298,8 @@ Focus areas:
 - [x] Update Home page Shop button with launch date
 - [ ] Add pre-order or waitlist functionality (optional)
 - [ ] Save checkpoint with launch date updates
+
+## Product Image Updates
+- [x] Regenerate 4 candle images without flames (beige, burgundy, terracotta, gold)
+- [x] Update Shop page with new candle images
+- [ ] Save checkpoint with updated images
