@@ -318,3 +318,11 @@ Focus areas:
 - [x] Generate new luxury cushion image matching Temu product (grey-blue with pink floral embroidery)
 - [x] Update Shop page with new cushion image
 - [ ] Save checkpoint with updated cushion
+
+## Soundscapes Feature
+- [x] Create Soundscapes page with nature sound players
+- [x] Add ambient sounds (rain, ocean, forest, fire, wind, birds, etc.)
+- [x] Implement audio controls (play/pause, volume, mix sounds)
+- [x] Add Soundscapes link to navigation
+- [ ] Test audio playback
+- [ ] Save checkpoint with Soundscapes feature

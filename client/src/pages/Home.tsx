@@ -256,7 +256,7 @@ const features = [
     icon: <Waves className="w-6 h-6" />,
     title: "Real-time Soundscapes",
     description: "Mix your perfect ambient sound. Control rain, ocean waves, wind, and birdsong to create your sanctuary.",
-    link: null,
+    link: "/soundscapes",
   },
   {
     icon: <Sparkles className="w-6 h-6" />,

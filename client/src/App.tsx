@@ -12,6 +12,7 @@ import AdventCalendar from "./pages/AdventCalendar";
 import GiftCard from "./pages/GiftCard";
 import Pricing from "./pages/Pricing";
 import Shop from "./pages/Shop";
+import Soundscapes from "./pages/Soundscapes";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -25,6 +26,7 @@ function Router() {
       <Route path={"/ gift-card"} component={GiftCard} />
       <Route path={"/pricing"} component={Pricing} />
       <Route path={"/shop"} component={Shop} />
+      <Route path={"/soundscapes"} component={Soundscapes} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
