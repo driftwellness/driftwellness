@@ -54,11 +54,11 @@ export default function Home() {
                   </Button>
                   <Link href="/shop">
                     <div className="relative inline-block">
-                      {/* Hand-drawn organic blob shape */}
-                      <svg className="absolute -inset-3 w-[calc(100%+24px)] h-[calc(100%+24px)]" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10,40 Q5,20 25,15 T60,10 Q90,8 120,12 T170,20 Q190,25 185,45 Q180,60 160,65 T120,68 Q80,70 50,66 T15,55 Q5,50 10,40 Z" stroke="#8B4049" strokeWidth="2.5" fill="none" className="animate-[draw_2s_ease-in-out_infinite]" strokeDasharray="400" strokeDashoffset="400" style={{animation: 'draw 3s ease-in-out infinite'}} />
+                      {/* Curved gold circle decoration */}
+                      <svg className="absolute -inset-4 w-[calc(100%+32px)] h-[calc(100%+32px)]" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="110" cy="45" rx="105" ry="40" stroke="#D4AF37" strokeWidth="2" fill="none" className="animate-pulse" style={{animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
                       </svg>
-                      <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-[#8B4049]/5 border-transparent">
+                      <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />
                         Shop (Opens Jan 1st)
                       </Button>
@@ -76,11 +76,11 @@ export default function Home() {
                   </Button>
                   <Link href="/shop">
                     <div className="relative inline-block">
-                      {/* Hand-drawn organic blob shape */}
-                      <svg className="absolute -inset-3 w-[calc(100%+24px)] h-[calc(100%+24px)]" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10,40 Q5,20 25,15 T60,10 Q90,8 120,12 T170,20 Q190,25 185,45 Q180,60 160,65 T120,68 Q80,70 50,66 T15,55 Q5,50 10,40 Z" stroke="#8B4049" strokeWidth="2.5" fill="none" className="animate-[draw_2s_ease-in-out_infinite]" strokeDasharray="400" strokeDashoffset="400" style={{animation: 'draw 3s ease-in-out infinite'}} />
+                      {/* Curved gold circle decoration */}
+                      <svg className="absolute -inset-4 w-[calc(100%+32px)] h-[calc(100%+32px)]" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="110" cy="45" rx="105" ry="40" stroke="#D4AF37" strokeWidth="2" fill="none" className="animate-pulse" style={{animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
                       </svg>
-                      <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-[#8B4049]/5 border-transparent">
+                      <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />
                         Shop (Opens Jan 1st)
                       </Button>

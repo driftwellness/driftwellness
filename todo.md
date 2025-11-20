@@ -333,3 +333,6 @@ Focus areas:
 - [x] Add "Soon" badge
 - [x] Make Shop button more visually prominent
 - [ ] Save checkpoint with enhancements
+
+## Shop Button Design Update
+- [x] Replace burgundy blob with curved gold circle around Shop button (more elegant, luxury style)
