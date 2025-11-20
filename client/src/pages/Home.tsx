@@ -134,13 +134,14 @@ export default function Home() {
                 Join a global community discovering their path to inner tranquility
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                  onClick={() => window.location.href = getLoginUrl()}
-                >
-                  Start Your Free Journey
-                </Button>
+                <Link href="/pricing">
+                  <Button 
+                    size="lg" 
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                  >
+                    Start Your Free Journey
+                  </Button>
+                </Link>
                 <Link href="/gift-card">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto">
                     <Gift className="mr-2 h-4 w-4" />

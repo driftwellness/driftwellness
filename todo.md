@@ -140,12 +140,13 @@ Focus areas:
 - [x] Add Stripe feature to project
 - [x] Create database schema for subscriptions
 - [x] Create subscription pricing plans (99 kr/month, 990 kr/year)
-- [ ] Build pricing/subscription page
-- [ ] Implement payment checkout flow
-- [ ] Create Stripe webhook handler
+- [x] Build pricing/subscription page with Basic (99kr) and Premium (199kr) tiers
+- [ ] Implement Stripe checkout flow for subscriptions
+- [ ] Implement Stripe checkout for gift cards and mystery gifts
+- [ ] Create Stripe webhook handler for payment confirmations
 - [ ] Add subscription management to user dashboard
 - [ ] Test payment flow end-to-end
-- [ ] Guide user through Stripe account setup
+- [ ] Guide user through Stripe account setup and API key configuration
 
 ## Navigation & UX Improvements (Free)
 - [x] Add "Back to Home" button on Audiobook page
@@ -214,3 +215,22 @@ Focus areas:
 - [ ] Set up inventory management
 - [ ] Create fulfillment process (send to winners/buyers)
 - [ ] Track profit margin (~500 kr per sale)
+
+## PWA (Progressive Web App) Setup
+- [x] Create manifest.json with app metadata
+- [x] Add PWA meta tags to index.html
+- [x] Configure app icons for installation
+- [x] Set theme colors and display mode
+- [ ] Test PWA installation on mobile devices (user to do)
+- [ ] Verify "Add to Home Screen" prompt appears
+
+## Marketing & Launch Strategy
+- [x] Create comprehensive social media marketing strategy document
+- [x] Define target audience and platform strategy
+- [x] Plan content calendar for Instagram, TikTok, YouTube
+- [x] Outline influencer collaboration approach
+- [x] Set KPIs and growth goals
+- [ ] Set up social media accounts (Instagram, TikTok, YouTube)
+- [ ] Create first 30 pieces of content
+- [ ] Reach out to micro-influencers
+- [ ] Launch first giveaway campaign
