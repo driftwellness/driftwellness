@@ -326,3 +326,10 @@ Focus areas:
 - [x] Add Soundscapes link to navigation
 - [ ] Test audio playback
 - [ ] Save checkpoint with Soundscapes feature
+
+## Shop Button Visual Enhancement
+- [x] Add golden ring/border around Shop button
+- [x] Add subtle pulsing animation to draw attention
+- [x] Add "Soon" badge
+- [x] Make Shop button more visually prominent
+- [ ] Save checkpoint with enhancements

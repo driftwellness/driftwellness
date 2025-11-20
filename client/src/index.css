@@ -201,3 +201,12 @@
     }
   }
 }
+/* Hand-drawn blob animation for Shop button */
+@keyframes draw {
+  0%, 100% {
+    stroke-dashoffset: 400;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
