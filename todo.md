@@ -195,3 +195,22 @@ Focus areas:
 - [ ] Generate unique gift codes (backend integration)
 - [ ] Email gift code to recipient (backend integration)
 - [ ] Store gift cards in database (backend integration)
+
+## Audiobook Content & Scripts
+- [x] Write 5 meditation scripts (Welcome to Drift, Art of Breathing, Body Scan, Loving-Kindness, Evening Ritual)
+- [x] Each script is 7-11 minutes when read aloud
+- [x] Scripts saved in MEDITATION_SCRIPTS.md
+- [ ] Record voice-overs for each chapter (user to do with ElevenLabs or similar)
+- [ ] Convert audio files to WAV format
+- [ ] Upload audio files to app
+- [ ] Test audiobook playback
+
+## Premium Mystery Gift (High-Margin Product)
+- [x] Add Premium Mystery Gift to gift card options (999 kr)
+- [x] Set perceived value at 2,000-3,000 kr
+- [x] Add BEST DEAL badge to highlight it
+- [x] Update grid layout to 3 columns
+- [ ] Create supplier list for bulk wellness products (yoga mat, meditation cushion, oils, etc.)
+- [ ] Set up inventory management
+- [ ] Create fulfillment process (send to winners/buyers)
+- [ ] Track profit margin (~500 kr per sale)

@@ -23,6 +23,15 @@ const giftCardOptions = [
     value: "1,990 kr",
     savings: "Save 398 kr",
   },
+  {
+    id: "mystery",
+    title: "Premium Mystery Gift",
+    description: "Luxury wellness package with yoga mat, meditation cushion, essential oils, and more. Actual value 2,000-3,000 kr!",
+    price: 999,
+    value: "999 kr",
+    savings: "Worth 2,000-3,000 kr!",
+    badge: "BEST DEAL",
+  },
 ];
 
 export default function GiftCard() {
@@ -77,7 +86,7 @@ export default function GiftCard() {
         {/* Gift Card Selection */}
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Choose a gift card</h2>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             {giftCardOptions.map((option) => (
               <Card
                 key={option.id}
@@ -90,11 +99,16 @@ export default function GiftCard() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
+                    {option.badge && (
+                      <div className="inline-block bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded mb-2">
+                        {option.badge}
+                      </div>
+                    )}
                     <h3 className="text-xl font-semibold mb-1">{option.title}</h3>
                     <p className="text-sm text-muted-foreground">{option.description}</p>
                   </div>
                   {selectedGift.id === option.id && (
-                    <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                    <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center ml-2">
                       <Check className="h-4 w-4 text-accent-foreground" />
                     </div>
                   )}
