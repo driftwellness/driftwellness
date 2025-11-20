@@ -234,3 +234,60 @@ Focus areas:
 - [ ] Create first 30 pieces of content
 - [ ] Reach out to micro-influencers
 - [ ] Launch first giveaway campaign
+
+## AI Coach Personalization
+- [x] Generate 4 different AI coach character portrait options
+- [x] User selected character (mystical spiritual in yoga outfit)
+- [x] Generated final version in earth-toned yoga clothing
+- [x] Character named "Amara" (meaning "eternal" in Sanskrit)
+- [x] Implement Amara's portrait in AI Coach page
+- [x] Add Amara's personality description
+- [x] Create personalized welcome messages from Amara
+
+## E-Commerce Shop
+- [x] Generate product images (4 candles, oils set, yoga mat, 2 cushions, Ankh necklace, 4 pants, 4 tops, 2 kimonos)
+- [x] Research and document wholesale suppliers (PRODUCT_SOURCING.md)
+- [x] Generate luxury perfume-style video (blonde woman with blue eyes applying oil - Rituals aesthetic)
+- [x] Add video to Shop page hero section
+- [x] Create database schema for products, cart, and orders
+- [x] Create classy Shop page with Rituals-inspired design
+- [x] Fix product image URLs to display correctly
+- [ ] Add product catalog with filtering and categories
+- [ ] Implement shopping cart functionality
+- [ ] Add product detail pages
+- [ ] Integrate Stripe checkout for product purchases
+- [ ] Test complete purchase flow
+
+## Product Sourcing for E-Commerce Shop
+- [x] Find wholesale candles (beige, burgundy, terracotta, gold colors)
+- [x] Find essential oils sets (lavender, eucalyptus, etc.)
+- [x] Find yoga mats with custom branding options
+- [x] Find meditation cushions (Nordic minimal + luxury styles)
+- [x] Find Ankh necklaces (gold/brass)
+- [x] Find yoga pants in earth tones (brown, white, beige, plum)
+- [x] Find yoga wrap tops/sweaters in earth tones
+- [x] Find meditation kimonos (luxury + minimal styles)
+- [x] Compare prices and margins for each product category
+- [x] Create PRODUCT_SOURCING.md with all supplier links and pricing
+- [ ] Contact suppliers and request samples
+- [ ] Order first batch of products for inventory
+
+## Amara (AI Coach) Integration Across App
+- [ ] Generate 3 new Amara images (welcome portrait, lifestyle/shop, hero portrait with open eyes)
+- [ ] Add "Meet Your Wellness Guide" section to home page
+- [ ] Add Amara avatar to navigation header
+- [ ] Update Pricing page to show Amara with Premium tier
+- [ ] Add Amara to Shop page ("Curated by Amara" section)
+- [ ] Create welcome popup with Amara greeting
+- [ ] Test all Amara appearances across app
+
+## Amara Integration & English Translation
+- [x] Generate 3 new Amara images with blue-green eyes (welcome, lifestyle, hero)
+- [x] User approved new Amara images
+- [x] Move Shop link to top navigation (make more visible)
+- [x] Add Amara to home page (Meet Your Guide section)
+- [ ] Add Amara avatar to navigation header
+- [x] Add Amara to Shop page (Curated by section)
+- [ ] Add Amara to Pricing page
+- [x] Translate entire app to English (all pages, buttons, forms - changed kr to NOK)
+- [ ] Set up language switcher system for future multi-language support

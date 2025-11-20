@@ -2,7 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { APP_TITLE, getLoginUrl } from "@/const";
-import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight, Gift } from "lucide-react";
+import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight, Gift, ShoppingBag } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -47,10 +47,18 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               {isAuthenticated ? (
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
-                  Continue Your Journey
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <>
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
+                    Continue Your Journey
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  <Link href="/shop">
+                    <Button size="lg" variant="outline" className="gap-2">
+                      <ShoppingBag className="w-5 h-5" />
+                      Explore Shop
+                    </Button>
+                  </Link>
+                </>
               ) : (
                 <>
                   <Button 
@@ -60,9 +68,12 @@ export default function Home() {
                   >
                     Get Started Free
                   </Button>
-                  <Button size="lg" variant="outline">
-                    Learn More
-                  </Button>
+                  <Link href="/shop">
+                    <Button size="lg" variant="outline" className="gap-2">
+                      <ShoppingBag className="w-5 h-5" />
+                      Explore Shop
+                    </Button>
+                  </Link>
                 </>
               )}
             </div>
@@ -122,6 +133,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Meet Your Guide - Amara Section */}
+      <section className="py-24 bg-gradient-to-b from-background to-card/30">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            {/* Amara Image */}
+            <div className="order-2 md:order-1">
+              <div className="relative">
+                <div className="absolute inset-0 bg-accent/20 rounded-3xl blur-3xl" />
+                <img 
+                  src="/amara-welcome-v2.jpg" 
+                  alt="Amara - Your Wellness Guide"
+                  className="relative rounded-3xl shadow-2xl w-full"
+                />
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div className="order-1 md:order-2 space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/40">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm font-medium">Meet Your Guide</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold">
+                This is{" "}
+                <span className="text-accent">Amara</span>
+              </h2>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Your personal wellness companion on the journey to inner peace. Amara combines ancient wisdom with modern mindfulness to guide you through meditation, breathwork, and self-discovery.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                With her warm presence and intuitive guidance, Amara helps you navigate life's challenges and find moments of tranquility in your daily routine.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Link href="/ai-coach">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                    Chat with Amara
+                  </Button>
+                </Link>
+                <Link href="/pricing">
+                  <Button size="lg" variant="outline">
+                    Learn More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24">
         <div className="container">
@@ -146,6 +210,11 @@ export default function Home() {
                   <Button size="lg" variant="outline" className="w-full sm:w-auto">
                     <Gift className="mr-2 h-4 w-4" />
                     Buy Gift Card
+                  </Button>
+                </Link>
+                <Link href="/shop">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-accent text-accent hover:bg-accent/10">
+                    Explore Shop
                   </Button>
                 </Link>
               </div>

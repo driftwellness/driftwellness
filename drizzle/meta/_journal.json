@@ -15,6 +15,13 @@
       "when": 1763302402168,
       "tag": "0001_curly_kinsey_walden",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1763639519237,
+      "tag": "0002_complex_william_stryker",
+      "breakpoints": true
     }
   ]
 }

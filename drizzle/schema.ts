@@ -72,3 +72,81 @@ export const journalEntries = mysqlTable("journal_entries", {
 
 export type JournalEntry = typeof journalEntries.$inferSelect;
 export type InsertJournalEntry = typeof journalEntries.$inferInsert;
+
+/**
+ * Products table
+ * Physical wellness products for e-commerce shop
+ */
+export const products = mysqlTable("products", {
+  id: int("id").primaryKey().autoincrement(),
+  
+  name: varchar("name", { length: 255 }).notNull(),
+  description: text("description").notNull(),
+  category: varchar("category", { length: 100 }).notNull(), // "candles", "oils", "yoga", "jewelry", "clothing"
+  subcategory: varchar("subcategory", { length: 100 }), // "tops", "pants", "kimonos", etc.
+  
+  price: int("price").notNull(), // Price in øre/cents (e.g., 29900 = 299 kr)
+  currency: varchar("currency", { length: 3 }).notNull().default("NOK"),
+  
+  imageUrl: varchar("imageUrl", { length: 500 }).notNull(),
+  images: text("images"), // JSON array of additional image URLs
+  
+  inStock: int("inStock").notNull().default(1),
+  featured: int("featured").notNull().default(0), // Boolean: 1 = featured, 0 = not featured
+  
+  // Product attributes (JSON for flexibility)
+  attributes: text("attributes"), // e.g., {"color": "burgundy", "size": "M", "scent": "lavender"}
+  
+  createdAt: timestamp("createdAt").notNull().defaultNow(),
+  updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+});
+
+export type Product = typeof products.$inferSelect;
+export type InsertProduct = typeof products.$inferInsert;
+
+/**
+ * Shopping cart items table
+ * Temporary storage for items before checkout
+ */
+export const cartItems = mysqlTable("cart_items", {
+  id: int("id").primaryKey().autoincrement(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  productId: int("productId").notNull().references(() => products.id, { onDelete: "cascade" }),
+  
+  quantity: int("quantity").notNull().default(1),
+  
+  createdAt: timestamp("createdAt").notNull().defaultNow(),
+  updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+});
+
+export type CartItem = typeof cartItems.$inferSelect;
+export type InsertCartItem = typeof cartItems.$inferInsert;
+
+/**
+ * Orders table
+ * Completed purchases
+ */
+export const orders = mysqlTable("orders", {
+  id: int("id").primaryKey().autoincrement(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  
+  // Stripe payment reference
+  stripePaymentIntentId: varchar("stripePaymentIntentId", { length: 255 }).notNull().unique(),
+  
+  totalAmount: int("totalAmount").notNull(), // Total in øre/cents
+  currency: varchar("currency", { length: 3 }).notNull().default("NOK"),
+  
+  status: varchar("status", { length: 50 }).notNull(), // "pending", "paid", "shipped", "delivered", "cancelled"
+  
+  // Shipping details (JSON)
+  shippingAddress: text("shippingAddress").notNull(),
+  
+  // Order items (JSON array)
+  items: text("items").notNull(), // [{productId, name, price, quantity, imageUrl}]
+  
+  createdAt: timestamp("createdAt").notNull().defaultNow(),
+  updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+});
+
+export type Order = typeof orders.$inferSelect;
+export type InsertOrder = typeof orders.$inferInsert;

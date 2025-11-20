@@ -44,7 +44,7 @@ export default function AICoach() {
     {
       id: 1,
       role: "assistant",
-      content: "Welcome to your personal wellness sanctuary. I'm here to support you on your journey to inner peace and well-being. How are you feeling today?",
+      content: "Namaste 🪷 I'm Amara, your personal wellness guide. I'm here to walk beside you on your journey to inner peace and balance. How are you feeling today?",
       timestamp: new Date(),
     },
   ]);
@@ -114,16 +114,23 @@ export default function AICoach() {
           </Button>
         </Link>
 
-        {/* Header */}
+        {/* Header with Amara */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4">
-            <Sparkles className="h-8 w-8 text-accent" />
+          <div className="mb-6">
+            <img 
+              src="/coach-yoga.jpg" 
+              alt="Amara - Your AI Wellness Coach" 
+              className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-accent/30 shadow-lg"
+            />
           </div>
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
-            AI Wellness Coach
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
+            Meet Amara
           </h1>
-          <p className="text-muted-foreground text-lg">
-            Your personal guide to mindfulness and well-being
+          <p className="text-xl text-muted-foreground mb-2">
+            Your AI Wellness Coach
+          </p>
+          <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+            Amara (meaning "eternal" in Sanskrit) combines ancient wisdom with modern guidance to support your journey to inner peace and well-being.
           </p>
         </div>
 

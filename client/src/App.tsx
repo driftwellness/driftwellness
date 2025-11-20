@@ -11,6 +11,7 @@ import AICoach from "./pages/AICoach";
 import AdventCalendar from "./pages/AdventCalendar";
 import GiftCard from "./pages/GiftCard";
 import Pricing from "./pages/Pricing";
+import Shop from "./pages/Shop";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -23,7 +24,9 @@ function Router() {
       <Route path={"/advent-calendar"} component={AdventCalendar} />
       <Route path={"/ gift-card"} component={GiftCard} />
       <Route path={"/pricing"} component={Pricing} />
-      <Route path={"/ 404"} component={NotFound} />     <Route component={NotFound} />
+      <Route path={"/shop"} component={Shop} />
+      <Route path={"/404"} component={NotFound} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
