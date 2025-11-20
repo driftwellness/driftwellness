@@ -80,10 +80,10 @@ const products = [
   {
     id: 8,
     name: "Meditation Cushion - Luxury",
-    description: "Luxurious burgundy meditation cushion with gold accents. Handcrafted with premium materials.",
+    description: "Luxurious grey-blue meditation cushion with intricate floral embroidery. Bohemian Indo-Western style, handcrafted with premium materials.",
     category: "yoga",
     price: 49900,
-    imageUrl: "/product-cushion-luxury.jpg",
+    imageUrl: "/product-cushion-luxury-v2.jpg",
     featured: true,
   },
   

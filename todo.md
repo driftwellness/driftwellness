@@ -309,3 +309,12 @@ Focus areas:
 - [x] Design printable DRIFT candle label template (for DIY candles)
 - [x] Update Shop page with new branded candle images
 - [ ] Save checkpoint with DRIFT-branded products
+
+## Product Sourcing - Meditation Cushions
+- [ ] Find meditation cushions on Temu matching product images
+- [ ] Add to TEMU_SHOPPING_GUIDE.md
+
+## Meditation Cushion Update
+- [x] Generate new luxury cushion image matching Temu product (grey-blue with pink floral embroidery)
+- [x] Update Shop page with new cushion image
+- [ ] Save checkpoint with updated cushion
