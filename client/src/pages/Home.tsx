@@ -54,9 +54,9 @@ export default function Home() {
                   </Button>
                   <Link href="/shop">
                     <div className="relative inline-block">
-                      {/* Curved gold circle decoration */}
+                      {/* Hand-drawn organic gold circle */}
                       <svg className="absolute -inset-4 w-[calc(100%+32px)] h-[calc(100%+32px)]" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="110" cy="45" rx="105" ry="40" stroke="#D4AF37" strokeWidth="2" fill="none" className="animate-pulse" style={{animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
+                        <path d="M15,45 Q20,20 40,15 Q70,10 110,10 Q150,10 180,15 Q200,20 205,45 Q200,70 180,75 Q150,80 110,80 Q70,80 40,75 Q20,70 15,45 Z" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse" style={{animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
                       </svg>
                       <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />
@@ -76,9 +76,9 @@ export default function Home() {
                   </Button>
                   <Link href="/shop">
                     <div className="relative inline-block">
-                      {/* Curved gold circle decoration */}
+                      {/* Hand-drawn organic gold circle */}
                       <svg className="absolute -inset-4 w-[calc(100%+32px)] h-[calc(100%+32px)]" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="110" cy="45" rx="105" ry="40" stroke="#D4AF37" strokeWidth="2" fill="none" className="animate-pulse" style={{animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
+                        <path d="M15,45 Q20,20 40,15 Q70,10 110,10 Q150,10 180,15 Q200,20 205,45 Q200,70 180,75 Q150,80 110,80 Q70,80 40,75 Q20,70 15,45 Z" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse" style={{animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'}} />
                       </svg>
                       <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />

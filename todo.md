@@ -336,3 +336,6 @@ Focus areas:
 
 ## Shop Button Design Update
 - [x] Replace burgundy blob with curved gold circle around Shop button (more elegant, luxury style)
+
+## Shop Button - Hand-drawn Gold Circle
+- [x] Replace perfect ellipse with organic hand-drawn gold circle (casual, imperfect style like user's sketch)
