@@ -14,7 +14,7 @@ const products = [
     description: "Hand-poured soy wax candle with calming lavender and vanilla notes. Burns for 40+ hours.",
     category: "candles",
     price: 29900,
-    imageUrl: "/product-candle-beige-v2.jpg",
+    imageUrl: "/product-candle-beige-drift.jpg",
     featured: true,
   },
   {
@@ -23,7 +23,7 @@ const products = [
     description: "Luxurious burgundy candle with warm sandalwood and amber. Perfect for evening meditation.",
     category: "candles",
     price: 29900,
-    imageUrl: "/product-candle-burgundy-v2.jpg",
+    imageUrl: "/product-candle-burgundy-drift.jpg",
     featured: true,
   },
   {
@@ -32,7 +32,7 @@ const products = [
     description: "Earthy terracotta candle with eucalyptus and sage. Brings nature indoors.",
     category: "candles",
     price: 29900,
-    imageUrl: "/product-candle-terracotta-v2.jpg",
+    imageUrl: "/product-candle-terracotta-drift.jpg",
     featured: false,
   },
   {
@@ -41,7 +41,7 @@ const products = [
     description: "Golden luxury candle with jasmine and rose. Elevate your self-care ritual.",
     category: "candles",
     price: 29900,
-    imageUrl: "/product-candle-gold-v2.jpg",
+    imageUrl: "/product-candle-gold-drift.jpg",
     featured: false,
   },
   

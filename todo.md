@@ -303,3 +303,9 @@ Focus areas:
 - [x] Regenerate 4 candle images without flames (beige, burgundy, terracotta, gold)
 - [x] Update Shop page with new candle images
 - [ ] Save checkpoint with updated images
+
+## DRIFT Branding for Candles
+- [x] Generate 4 new candle images with DRIFT logo on labels
+- [x] Design printable DRIFT candle label template (for DIY candles)
+- [x] Update Shop page with new branded candle images
+- [ ] Save checkpoint with DRIFT-branded products
