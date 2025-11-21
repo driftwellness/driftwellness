@@ -263,10 +263,10 @@ export default function Shop() {
       <section className="bg-gradient-to-r from-[#8B4049] via-[#C97C5D] to-[#D4AF37] py-4">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white font-semibold text-lg sm:text-xl">
-            🎉 Grand Opening: <span className="font-bold">January 1st, 2026</span> ✨
+            🎉 Pre-order Now - Ships <span className="font-bold">January 1st, 2026</span> ✨
           </p>
           <p className="text-white/90 text-sm mt-1">
-            Browse our collection now - Shopping opens New Year's Day!
+            Secure your favorites today! All orders ship starting New Year's Day.
           </p>
         </div>
       </section>
@@ -357,17 +357,25 @@ export default function Shop() {
                     </p>
                   </div>
                   
-                  <div className="flex items-center justify-between pt-2">
-                    <span className="text-xl font-semibold text-[#8B4049]">
-                      {formatPrice(product.price)}
-                    </span>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xl font-semibold text-[#8B4049]">
+                        {formatPrice(product.price)}
+                      </span>
+                      <Badge variant="outline" className="text-xs border-[#D4AF37] text-[#8B4049]">
+                        Pre-order
+                      </Badge>
+                    </div>
                     <Button
-                      disabled
-                      className="bg-[#8B4049]/50 text-white cursor-not-allowed"
-                      title="Available January 1st, 2026"
+                      onClick={() => addToCart(product.id)}
+                      className="w-full bg-[#8B4049] hover:bg-[#8B4049]/90 text-white"
                     >
-                      Coming Jan 1st
+                      <ShoppingCart className="w-4 h-4 mr-2" />
+                      Add to Cart
                     </Button>
+                    <p className="text-xs text-[#8B4049]/60 text-center">
+                      Ships January 1st, 2026
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -376,16 +384,16 @@ export default function Shop() {
         </div>
       </section>
 
-      {/* Curated by Amara Section */}
+      {/* Curated by Maria Section */}
       <section className="py-16 bg-white/80">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Amara Image */}
+              {/* Maria Image */}
               <div className="order-2 md:order-1">
                 <img 
                   src="/amara-lifestyle-v2.jpg" 
-                  alt="Amara - Wellness Curator"
+                  alt="Maria - Wellness Curator"
                   className="rounded-2xl shadow-2xl w-full"
                 />
               </div>
@@ -393,7 +401,7 @@ export default function Shop() {
               {/* Content */}
               <div className="order-1 md:order-2 space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/20 text-[#8B4049] border border-[#D4AF37]/40">
-                  <span className="text-sm font-medium">Curated by Amara</span>
+                  <span className="text-sm font-medium">Curated by Maria</span>
                 </div>
                 
                 <h3 className="text-3xl font-serif text-[#8B4049]">
@@ -401,7 +409,7 @@ export default function Shop() {
                 </h3>
                 
                 <p className="text-[#8B4049]/70 leading-relaxed">
-                  Every product in our collection has been carefully selected by Amara to enhance your mindfulness practice and bring serenity to your daily rituals.
+                  Every product in our collection has been carefully selected by Maria to enhance your mindfulness practice and bring serenity to your daily rituals.
                 </p>
                 
                 <p className="text-[#8B4049]/70 leading-relaxed">

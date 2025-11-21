@@ -44,7 +44,7 @@ export default function AICoach() {
     {
       id: 1,
       role: "assistant",
-      content: "Namaste 🪷 I'm Amara, your personal wellness guide. I'm here to walk beside you on your journey to inner peace and balance. How are you feeling today?",
+      content: "Hello 🪷 I'm Maria, your personal wellness guide. I'm here to walk beside you on your journey to inner peace and balance. How are you feeling today?",
       timestamp: new Date(),
     },
   ]);
@@ -114,23 +114,23 @@ export default function AICoach() {
           </Button>
         </Link>
 
-        {/* Header with Amara */}
+        {/* Header with Maria */}
         <div className="text-center mb-8">
           <div className="mb-6">
             <img 
               src="/coach-yoga.jpg" 
-              alt="Amara - Your AI Wellness Coach" 
+              alt="Maria - Your AI Wellness Coach" 
               className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-accent/30 shadow-lg"
             />
           </div>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
-            Meet Amara
+            Meet Maria
           </h1>
           <p className="text-xl text-muted-foreground mb-2">
             Your AI Wellness Coach
           </p>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            Amara (meaning "eternal" in Sanskrit) combines ancient wisdom with modern guidance to support your journey to inner peace and well-being.
+            Maria combines ancient wisdom with modern guidance to support your journey to inner peace and well-being. With warmth and compassion, she's here to help you find balance in your daily life.
           </p>
         </div>
 

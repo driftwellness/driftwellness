@@ -339,3 +339,23 @@ Focus areas:
 
 ## Shop Button - Hand-drawn Gold Circle
 - [x] Replace perfect ellipse with organic hand-drawn gold circle (casual, imperfect style like user's sketch)
+
+## Home Page Shop Section
+- [ ] Add dedicated Shop section to home page between features and Maria section
+- [ ] Display 3-4 featured products with images and prices
+- [ ] Add "Curated by Maria" branding
+- [ ] Include "Explore Shop" call-to-action button
+- [ ] Show "Launching January 1st" banner
+
+## Rename AI Coach from Amara to Maria
+- [x] Update Home page (Meet Your Guide section)
+- [x] Update AI Coach page
+- [x] Update Shop page (Curated by section)
+- [x] Update all references throughout the app
+
+## Pre-order Functionality
+- [x] Enable "Add to Cart" buttons on Shop page
+- [x] Add "Pre-order - Ships January 1st, 2026" messaging
+- [x] Update product cards with pre-order badge
+- [x] Update banner to say "Pre-order now" instead of disabled message
+- [x] Add shipping date information to product details

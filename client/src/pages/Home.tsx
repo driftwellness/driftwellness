@@ -145,17 +145,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Your Guide - Amara Section */}
+      {/* Meet Your Guide - Maria Section */}
       <section className="py-24 bg-gradient-to-b from-background to-card/30">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Amara Image */}
+            {/* Maria Image */}
             <div className="order-2 md:order-1">
               <div className="relative">
                 <div className="absolute inset-0 bg-accent/20 rounded-3xl blur-3xl" />
                 <img 
                   src="/amara-welcome-v2.jpg" 
-                  alt="Amara - Your Wellness Guide"
+                  alt="Maria - Your Wellness Guide"
                   className="relative rounded-3xl shadow-2xl w-full"
                 />
               </div>
@@ -170,21 +170,21 @@ export default function Home() {
               
               <h2 className="text-4xl md:text-5xl font-bold">
                 This is{" "}
-                <span className="text-accent">Amara</span>
+                <span className="text-accent">Maria</span>
               </h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Your personal wellness companion on the journey to inner peace. Amara combines ancient wisdom with modern mindfulness to guide you through meditation, breathwork, and self-discovery.
+                Your personal wellness companion on the journey to inner peace. Maria combines ancient wisdom with modern mindfulness to guide you through meditation, breathwork, and self-discovery.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With her warm presence and intuitive guidance, Amara helps you navigate life's challenges and find moments of tranquility in your daily routine.
+                With her warm presence and intuitive guidance, Maria helps you navigate life's challenges and find moments of tranquility in your daily routine.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link href="/ai-coach">
                   <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                    Chat with Amara
+                    Chat with Maria
                   </Button>
                 </Link>
                 <Link href="/pricing">
