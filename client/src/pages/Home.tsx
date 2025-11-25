@@ -1,6 +1,7 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { APP_TITLE, getLoginUrl } from "@/const";
 import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight, Gift, ShoppingBag } from "lucide-react";
 import { Link } from "wouter";
@@ -141,6 +142,138 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Shop Section */}
+      <section className="py-24 bg-background">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/40 mb-4">
+              <ShoppingBag className="w-4 h-4" />
+              <span className="text-sm font-medium">Curated by Maria</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Wellness{" "}
+              <span className="text-accent">Essentials</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Handpicked products to enhance your mindfulness practice and bring serenity to your daily rituals
+            </p>
+          </div>
+
+          {/* Featured Products Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
+            {/* Product 1: Serenity Candle */}
+            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
+                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
+                  Pre-order
+                </Badge>
+                <img
+                  src="/product-candle-beige-drift.jpg"
+                  alt="Serenity Candle"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <CardContent className="p-4 space-y-2">
+                <h3 className="font-semibold text-lg">Serenity Candle</h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  Hand-poured soy wax with calming lavender and vanilla
+                </p>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-xl font-bold text-accent">299 NOK</span>
+                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Product 2: Essential Oils */}
+            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
+                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
+                  Pre-order
+                </Badge>
+                <img
+                  src="/product-oils.jpg"
+                  alt="Essential Oils Set"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <CardContent className="p-4 space-y-2">
+                <h3 className="font-semibold text-lg">Essential Oils Set</h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  Pure lavender, eucalyptus, and peppermint oils
+                </p>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-xl font-bold text-accent">399 NOK</span>
+                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Product 3: Meditation Cushion */}
+            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
+                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
+                  Pre-order
+                </Badge>
+                <img
+                  src="/product-cushion-luxury-v2.jpg"
+                  alt="Meditation Cushion"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <CardContent className="p-4 space-y-2">
+                <h3 className="font-semibold text-lg">Meditation Cushion</h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  Grey-blue velvet with floral embroidery
+                </p>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-xl font-bold text-accent">499 NOK</span>
+                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Product 4: Yoga Mat */}
+            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
+                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
+                  Pre-order
+                </Badge>
+                <img
+                  src="/product-mat.jpg"
+                  alt="Yoga Mat"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <CardContent className="p-4 space-y-2">
+                <h3 className="font-semibold text-lg">Premium Yoga Mat</h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  Non-slip, eco-friendly cork and rubber
+                </p>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-xl font-bold text-accent">699 NOK</span>
+                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Explore Shop Button */}
+          <div className="text-center">
+            <Link href="/shop">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
+                <ShoppingBag className="w-5 h-5" />
+                Explore Full Collection
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+            <p className="text-sm text-muted-foreground mt-3">
+              Pre-order now • Ships January 1st, 2026
+            </p>
           </div>
         </div>
       </section>

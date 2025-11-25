@@ -247,14 +247,16 @@ export default function Shop() {
               Drift Shop
             </h1>
             
-            <Button variant="ghost" className="gap-2 relative">
-              <ShoppingCart className="w-5 h-5" />
-              {cart.length > 0 && (
-                <Badge className="absolute -top-1 -right-1 bg-[#D4AF37] text-white">
-                  {cart.length}
-                </Badge>
-              )}
-            </Button>
+            <Link href="/checkout">
+              <Button variant="ghost" className="gap-2 relative">
+                <ShoppingCart className="w-5 h-5" />
+                {cart.length > 0 && (
+                  <Badge className="absolute -top-1 -right-1 bg-[#D4AF37] text-white">
+                    {cart.length}
+                  </Badge>
+                )}
+              </Button>
+            </Link>
           </div>
         </div>
       </header>

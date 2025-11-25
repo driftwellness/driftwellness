@@ -13,6 +13,8 @@ import GiftCard from "./pages/GiftCard";
 import Pricing from "./pages/Pricing";
 import Shop from "./pages/Shop";
 import Soundscapes from "./pages/Soundscapes";
+import Checkout from "./pages/Checkout";
+import OrderSuccess from "./pages/OrderSuccess";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -26,6 +28,8 @@ function Router() {
       <Route path={"/ gift-card"} component={GiftCard} />
       <Route path={"/pricing"} component={Pricing} />
       <Route path={"/shop"} component={Shop} />
+      <Route path={"/checkout"} component={Checkout} />
+      <Route path={"/order-success"} component={OrderSuccess} />
       <Route path={"/soundscapes"} component={Soundscapes} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />

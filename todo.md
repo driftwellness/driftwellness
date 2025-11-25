@@ -341,11 +341,21 @@ Focus areas:
 - [x] Replace perfect ellipse with organic hand-drawn gold circle (casual, imperfect style like user's sketch)
 
 ## Home Page Shop Section
-- [ ] Add dedicated Shop section to home page between features and Maria section
-- [ ] Display 3-4 featured products with images and prices
-- [ ] Add "Curated by Maria" branding
-- [ ] Include "Explore Shop" call-to-action button
-- [ ] Show "Launching January 1st" banner
+- [x] Add dedicated Shop section to home page between features and Maria section
+- [x] Display 3-4 featured products with images and prices
+- [x] Add "Curated by Maria" branding
+- [x] Include "Explore Shop" call-to-action button
+- [x] Show "Pre-order now" messaging
+
+## Daily Poem Feature
+- [x] Write 30-50 original poems categorized by mood (Calming, Motivating, Empowering, Loving, Mixed)
+- [x] Create Daily Poem popup component
+- [ ] Add poem display on app open or scheduled time
+- [ ] Create Settings page with Daily Poem preferences
+- [ ] Add toggle to enable/disable Daily Poem
+- [ ] Add mood preference selector
+- [ ] Add notification time picker
+- [ ] Store user preferences in database
 
 ## Rename AI Coach from Amara to Maria
 - [x] Update Home page (Meet Your Guide section)
@@ -359,3 +369,17 @@ Focus areas:
 - [x] Update product cards with pre-order badge
 - [x] Update banner to say "Pre-order now" instead of disabled message
 - [x] Add shipping date information to product details
+
+## Pricing Update
+- [ ] Update meditation cushion price from 109 NOK to 499 NOK on home page
+- [ ] Update meditation cushion price from 109 NOK to 499 NOK in Shop page
+
+## Stripe Payment Integration
+- [x] Add Stripe API keys to environment
+- [x] Validate Stripe API keys with test
+- [x] Implement checkout flow
+- [x] Create checkout page
+- [x] Create order success page
+- [x] Register Stripe API routes
+- [ ] Test payment with test card
+- [ ] Verify order confirmation
