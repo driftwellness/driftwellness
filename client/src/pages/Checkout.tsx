@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCart } from "@/contexts/CartContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,21 +8,9 @@ import { ArrowLeft, ShoppingCart, Trash2 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 
-// This will be passed from Shop page via URL params or context
-// For now, using dummy data
-const dummyCartItems = [
-  {
-    id: 1,
-    name: "Serenity Candle - Beige",
-    price: 29900,
-    quantity: 1,
-    imageUrl: "/product-candle-beige-drift.jpg",
-  },
-];
-
 export default function Checkout() {
   const [, setLocation] = useLocation();
-  const [cartItems, setCartItems] = useState(dummyCartItems);
+  const { cart: cartItems, removeFromCart, updateQuantity } = useCart();
   const [isProcessing, setIsProcessing] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -34,15 +23,13 @@ export default function Checkout() {
   });
 
   const removeItem = (id: number) => {
-    setCartItems(cartItems.filter(item => item.id !== id));
+    removeFromCart(id);
     toast.success("Item removed from cart");
   };
 
-  const updateQuantity = (id: number, newQuantity: number) => {
+  const handleUpdateQuantity = (id: number, newQuantity: number) => {
     if (newQuantity < 1) return;
-    setCartItems(cartItems.map(item => 
-      item.id === id ? { ...item, quantity: newQuantity } : item
-    ));
+    updateQuantity(id, newQuantity);
   };
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -233,7 +220,7 @@ export default function Checkout() {
                           size="sm"
                           variant="outline"
                           className="h-6 w-6 p-0"
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}
                         >
                           -
                         </Button>
@@ -242,7 +229,7 @@ export default function Checkout() {
                           size="sm"
                           variant="outline"
                           className="h-6 w-6 p-0"
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          onClick={() => handleUpdateQuantity(item.id, item.quantity + 1)}
                         >
                           +
                         </Button>

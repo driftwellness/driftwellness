@@ -237,29 +237,6 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Product 4: Yoga Mat */}
-            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
-                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
-                  Pre-order
-                </Badge>
-                <img
-                  src="/product-mat.jpg"
-                  alt="Yoga Mat"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <CardContent className="p-4 space-y-2">
-                <h3 className="font-semibold text-lg">Premium Yoga Mat</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-                  Non-slip, eco-friendly cork and rubber
-                </p>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-xl font-bold text-accent">699 NOK</span>
-                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Explore Shop Button */}

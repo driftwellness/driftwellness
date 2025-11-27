@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import { useCart } from "@/contexts/CartContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Home, Sparkles } from "lucide-react";
+import { toast } from "sonner";
 
 // Product data - will be moved to database later
 const products = [
@@ -56,24 +58,13 @@ const products = [
     featured: true,
   },
   
-  // Yoga Mat
-  {
-    id: 6,
-    name: "Drift Yoga Mat",
-    description: "Premium eco-friendly yoga mat with Drift logo. Non-slip, 6mm thick, perfect for all practices.",
-    category: "yoga",
-    price: 59900,
-    imageUrl: "/product-yoga-mat.jpg",
-    featured: true,
-  },
-  
   // Meditation Cushions
   {
     id: 7,
     name: "Meditation Cushion - Nordic",
     description: "Minimalist zafu cushion in soft beige. Filled with buckwheat hulls for perfect support.",
     category: "yoga",
-    price: 39900,
+    price: 49900,
     imageUrl: "/product-cushion-nordic.jpg",
     featured: false,
   },
@@ -216,14 +207,20 @@ const categories = [
 
 export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [cart, setCart] = useState<number[]>([]);
+  const { addToCart, getTotalItems } = useCart();
 
   const filteredProducts = selectedCategory === "all" 
     ? products 
     : products.filter(p => p.category === selectedCategory);
 
-  const addToCart = (productId: number) => {
-    setCart([...cart, productId]);
+  const handleAddToCart = (product: typeof products[0]) => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      imageUrl: product.imageUrl,
+    });
+    toast.success(`${product.name} added to cart!`);
   };
 
   const formatPrice = (priceInOre: number) => {
@@ -250,9 +247,9 @@ export default function Shop() {
             <Link href="/checkout">
               <Button variant="ghost" className="gap-2 relative">
                 <ShoppingCart className="w-5 h-5" />
-                {cart.length > 0 && (
+                {getTotalItems() > 0 && (
                   <Badge className="absolute -top-1 -right-1 bg-[#D4AF37] text-white">
-                    {cart.length}
+                    {getTotalItems()}
                   </Badge>
                 )}
               </Button>
@@ -369,7 +366,7 @@ export default function Shop() {
                       </Badge>
                     </div>
                     <Button
-                      onClick={() => addToCart(product.id)}
+                      onClick={() => handleAddToCart(product)}
                       className="w-full bg-[#8B4049] hover:bg-[#8B4049]/90 text-white"
                     >
                       <ShoppingCart className="w-4 h-4 mr-2" />

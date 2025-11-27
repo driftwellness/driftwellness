@@ -383,3 +383,14 @@ Focus areas:
 - [x] Register Stripe API routes
 - [ ] Test payment with test card
 - [ ] Verify order confirmation
+
+## Shopping Cart Fix
+- [x] Create global cart context
+- [x] Connect Shop page to cart context
+- [x] Connect Checkout page to cart context
+- [ ] Test adding products and viewing in checkout
+
+## Product Updates
+- [x] Remove yoga mat from Shop page
+- [x] Remove yoga mat from Home page
+- [x] Update meditation cushion price to 499 NOK
