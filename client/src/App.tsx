@@ -6,6 +6,10 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { CartProvider } from "./contexts/CartContext";
 import Home from "./pages/Home";
+import Impact from "./pages/Impact";
+import Settings from "./pages/Settings";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import Audiobook from "./pages/Audiobook";
 import Journal from "./pages/Journal";
 import AICoach from "./pages/AICoach";
@@ -22,6 +26,10 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path="/impact" component={Impact} />
+      <Route path="/settings" component={Settings} />
+      <Route path="/privacy" component={PrivacyPolicy} />
+      <Route path="/terms" component={TermsOfService} />
       <Route path={"/audiobook"} component={Audiobook} />
       <Route path={"/journal"} component={Journal} />
       <Route path={"/ai-coach"} component={AICoach} />

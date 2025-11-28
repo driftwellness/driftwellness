@@ -346,9 +346,75 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-12">
-        <div className="container text-center text-sm text-muted-foreground">
-          <p>© 2025 {APP_TITLE}. Find your stillness.</p>
+      <footer className="border-t border-border/50 py-12 bg-muted/30">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Company Info */}
+            <div className="space-y-3">
+              <h3 className="font-semibold text-foreground">{APP_TITLE}</h3>
+              <p className="text-sm text-muted-foreground">
+                A luxurious sanctuary for mindfulness, restoration, and self-discovery.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Operated by <strong>Heltentmerlivogel</strong>
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-3">
+              <h3 className="font-semibold text-foreground">Quick Links</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/impact" className="hover:text-foreground transition-colors">
+                    Our Impact Mission
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/shop" className="hover:text-foreground transition-colors">
+                    Shop
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" className="hover:text-foreground transition-colors">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/settings" className="hover:text-foreground transition-colors">
+                    Settings
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div className="space-y-3">
+              <h3 className="font-semibold text-foreground">Legal</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/privacy" className="hover:text-foreground transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="hover:text-foreground transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <a href="mailto:support@driftapp.no" className="hover:text-foreground transition-colors">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
+            <p>© {new Date().getFullYear()} Heltentmerlivogel. All rights reserved.</p>
+            <p className="mt-2">Find your stillness. Create global change.</p>
+          </div>
         </div>
       </footer>
     </div>

@@ -394,3 +394,34 @@ Focus areas:
 - [x] Remove yoga mat from Shop page
 - [x] Remove yoga mat from Home page
 - [x] Update meditation cushion price to 499 NOK
+
+## Pricing Page Update
+- [x] Add Standard tier (199 NOK/mnd)
+- [x] Add Premium tier (299 NOK/mnd) with AI Coach + 50 NOK donation
+- [x] Add Impact tier (349 NOK/mnd) with 100 NOK donation
+- [x] Highlight Premium as "Most Popular"
+
+## Impact Page
+- [x] Create Impact page with hero section
+- [x] Add real-time donation tracker (members / goal)
+- [x] Add timeline of donation milestones
+- [x] Add voting competition explanation
+- [x] Add transparency section
+
+## Daily Poem Feature
+- [x] Integrate DailyPoemDialog component
+- [x] Create Settings page
+- [x] Add Daily Poem preferences (enable/disable, mood, time)
+- [ ] Show poem on app open or scheduled time (requires backend integration)
+
+## Legal Pages
+- [x] Create Privacy Policy page
+- [x] Create Terms of Service page
+- [x] Add GDPR compliance info
+- [ ] Add cookie banner (optional - can be added later)
+
+## Footer Update
+- [x] Add company name (Heltentmerlivogel)
+- [x] Add copyright notice
+- [x] Add links to Privacy Policy and Terms
+- [x] Add contact info
