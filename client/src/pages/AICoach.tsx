@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ArrowLeft, Send, Sparkles, Heart, Zap, Moon } from "lucide-react";
-import { Link } from "wouter";
+import { ArrowLeft, Send, Sparkles, Heart, Zap, Moon, RefreshCw } from "lucide-react";
+import { Link, useLocation } from "wouter";
 
 interface Message {
   id: number;
@@ -39,12 +39,35 @@ const coachPersonalities = [
   },
 ];
 
-export default function AICoach() {
+const coachData = {
+  maria: {
+    name: "Maria",
+    image: "/maria.jpg",
+    greeting: "Hello 🪷 I'm Maria, your personal wellness guide. I'm here to walk beside you on your journey to inner peace and balance. How are you feeling today?",
+    description: "Maria combines ancient wisdom with modern guidance to support your journey to inner peace and well-being. With warmth and compassion, she's here to help you find balance in your daily life.",
+  },
+  zane: {
+    name: "Zane",
+    image: "/zane.jpg",
+    greeting: "Hey there 🌿 I'm Zane, your wellness coach. I'm here to help you build strength, clarity, and balance in your life. What's on your mind today?",
+    description: "Zane brings grounded wisdom and steady support to your wellness journey. With a calm and confident presence, he helps you find your inner strength and navigate life's challenges with clarity.",
+  },
+};
+
+interface AICoachProps {
+  selectedCoach?: "maria" | "zane";
+}
+
+export default function AICoach({ selectedCoach = "maria" }: AICoachProps) {
+  const [, setLocation] = useLocation();
+  const [currentCoach, setCurrentCoach] = useState<"maria" | "zane">(selectedCoach);
+  const coach = coachData[currentCoach];
+  
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
       role: "assistant",
-      content: "Hello 🪷 I'm Maria, your personal wellness guide. I'm here to walk beside you on your journey to inner peace and balance. How are you feeling today?",
+      content: coach.greeting,
       timestamp: new Date(),
     },
   ]);
@@ -53,6 +76,18 @@ export default function AICoach() {
   const [selectedPersonality, setSelectedPersonality] = useState(coachPersonalities[0]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Update messages when coach changes
+  useEffect(() => {
+    setMessages([
+      {
+        id: 1,
+        role: "assistant",
+        content: coachData[currentCoach].greeting,
+        timestamp: new Date(),
+      },
+    ]);
+  }, [currentCoach]);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -60,6 +95,10 @@ export default function AICoach() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  const handleSwitchCoach = () => {
+    setLocation("/coach-selection");
+  };
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -77,12 +116,21 @@ export default function AICoach() {
 
     // Simulate AI response (in production, this would call your AI API)
     setTimeout(() => {
-      const responses = [
+      const mariaResponses = [
         "That's wonderful to hear. Taking time for self-reflection is an important step in your wellness journey. What specific area would you like to focus on today?",
         "I understand how you're feeling. Remember, it's completely normal to have ups and downs. Let's explore some gentle practices that might help you find balance.",
         "Your awareness of your emotional state is a sign of growth. Would you like to try a brief breathing exercise, or would you prefer to talk more about what's on your mind?",
         "It sounds like you're making meaningful progress. Consistency is key in building lasting wellness habits. How can I support you in maintaining this positive momentum?",
       ];
+
+      const zaneResponses = [
+        "I hear you. That takes courage to acknowledge. Let's work through this together and find practical steps you can take right now.",
+        "Good to hear from you. Remember, progress isn't always linear - what matters is that you keep showing up. What's one thing you can do today to move forward?",
+        "That's a solid observation. Building awareness is the foundation of real change. How do you want to approach this?",
+        "I appreciate you sharing that. You've got the strength to handle this - let's focus on what you can control and build from there.",
+      ];
+
+      const responses = currentCoach === "maria" ? mariaResponses : zaneResponses;
 
       const assistantMessage: Message = {
         id: Date.now() + 1,
@@ -114,24 +162,34 @@ export default function AICoach() {
           </Button>
         </Link>
 
-        {/* Header with Maria */}
+        {/* Header with Coach */}
         <div className="text-center mb-8">
           <div className="mb-6">
             <img 
-              src="/coach-yoga.jpg" 
-              alt="Maria - Your AI Wellness Coach" 
+              src={coach.image}
+              alt={`${coach.name} - Your AI Wellness Coach`}
               className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-accent/30 shadow-lg"
             />
           </div>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
-            Meet Maria
+            Meet {coach.name}
           </h1>
           <p className="text-xl text-muted-foreground mb-2">
             Your AI Wellness Coach
           </p>
-          <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            Maria combines ancient wisdom with modern guidance to support your journey to inner peace and well-being. With warmth and compassion, she's here to help you find balance in your daily life.
+          <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-4">
+            {coach.description}
           </p>
+          
+          {/* Switch Coach Button */}
+          <Button
+            variant="outline"
+            onClick={handleSwitchCoach}
+            className="mt-2"
+          >
+            <RefreshCw className="mr-2 h-4 w-4" />
+            Bytt coach
+          </Button>
         </div>
 
         {/* Personality Selector */}
@@ -240,7 +298,10 @@ export default function AICoach() {
               <div className="bg-background/50 rounded-lg p-3 text-sm">
                 <p className="font-medium mb-1">Example morning reminder:</p>
                 <p className="text-muted-foreground italic">
-                  "Good morning! 🌅 Ready to embrace a new day? Start with 5 minutes of gentle stretching to awaken your body and mind."
+                  {currentCoach === "maria" 
+                    ? '"Good morning! 🌅 Ready to embrace a new day? Start with 5 minutes of gentle stretching to awaken your body and mind."'
+                    : '"Morning! 🌅 New day, fresh start. Take 5 minutes to stretch and set your intention. What do you want to accomplish today?"'
+                  }
                 </p>
               </div>
             </div>

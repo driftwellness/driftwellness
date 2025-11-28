@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `preferredCoach` enum('maria','zane') DEFAULT 'maria';

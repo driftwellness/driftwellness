@@ -21,8 +21,12 @@ import Shop from "./pages/Shop";
 import Soundscapes from "./pages/Soundscapes";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
+import CoachSelection from "./pages/CoachSelection";
+import { useState } from "react";
 
 function Router() {
+  const [selectedCoach, setSelectedCoach] = useState<"maria" | "zane">("maria");
+
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
@@ -33,7 +37,12 @@ function Router() {
       <Route path="/terms" component={TermsOfService} />
       <Route path={"/audiobook"} component={Audiobook} />
       <Route path={"/journal"} component={Journal} />
-      <Route path={"/ai-coach"} component={AICoach} />
+      <Route path={"/coach-selection"}>
+        {() => <CoachSelection onSelectCoach={setSelectedCoach} />}
+      </Route>
+      <Route path={"/ai-coach"}>
+        {() => <AICoach selectedCoach={selectedCoach} />}
+      </Route>
       <Route path={"/advent-calendar"} component={AdventCalendar} />
       <Route path={"/ gift-card"} component={GiftCard} />
       <Route path={"/pricing"} component={Pricing} />

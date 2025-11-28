@@ -438,3 +438,13 @@ Focus areas:
 - [x] Add voting competition explanation (every 2 years)
 - [x] Add personal journey section (founder travels to document)
 - [x] Update milestone timeline
+
+## AI Coach Gender Selection
+- [x] Choose name for male AI coach (Zane)
+- [x] Generate Zane portrait images (3 options)
+- [x] Create coach selection screen (choose between Maria and Zane)
+- [x] Update AI Coach page with selection interface
+- [x] Add database field to store user's coach preference
+- [x] Update chat interface to use selected coach
+- [x] Add "Switch Coach" button in AI Coach page
+- [ ] Update Home page "Meet Maria" section to "Meet Your Guides" with both coaches

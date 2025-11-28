@@ -21,6 +21,9 @@ export const users = mysqlTable("users", {
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
   
+  // AI Coach preference
+  preferredCoach: mysqlEnum("preferredCoach", ["maria", "zane"]).default("maria"),
+  
   // Stripe integration
   stripeCustomerId: varchar("stripeCustomerId", { length: 255 }).unique(),
 });
