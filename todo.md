@@ -459,3 +459,7 @@ Focus areas:
 ## Member Counter Fix
 - [x] Change member counter from test data (15,042) to 0
 - [x] Update to show "0 / 15,000 members - 0% to clean water!"
+
+## Footer Update
+- [x] Remove "Operated by Heltentmerlivogel" from footer
+- [x] Keep company name in Privacy Policy and Terms of Service (legally required)

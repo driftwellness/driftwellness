@@ -379,9 +379,6 @@ export default function Home() {
               <p className="text-sm text-muted-foreground">
                 A luxurious sanctuary for mindfulness, restoration, and self-discovery.
               </p>
-              <p className="text-sm text-muted-foreground">
-                Operated by <strong>Heltentmerlivogel</strong>
-              </p>
             </div>
 
             {/* Quick Links */}
@@ -436,7 +433,7 @@ export default function Home() {
 
           {/* Copyright */}
           <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} Heltentmerlivogel. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} {APP_TITLE}. All rights reserved.</p>
             <p className="mt-2">Find your stillness. Create global change.</p>
           </div>
         </div>
