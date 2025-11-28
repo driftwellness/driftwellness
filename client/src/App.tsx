@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { CartProvider } from "./contexts/CartContext";
+import MemberCounterBanner from "./components/MemberCounterBanner";
 import Home from "./pages/Home";
 import Impact from "./pages/Impact";
 import Settings from "./pages/Settings";
@@ -54,12 +55,14 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
+        <ThemeProvider
         defaultTheme="light"
+        // switchable
       >
         <CartProvider>
           <TooltipProvider>
             <Toaster />
+            <MemberCounterBanner />
             <Router />
           </TooltipProvider>
         </CartProvider>

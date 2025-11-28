@@ -425,3 +425,16 @@ Focus areas:
 - [x] Add copyright notice
 - [x] Add links to Privacy Policy and Terms
 - [x] Add contact info
+
+## Member Counter Banner
+- [x] Create global member counter banner component
+- [x] Add to all pages (sticky top banner)
+- [x] Show progress: "12,042 / 15,000 members - 80% to clean water!"
+- [x] Make clickable → links to Impact page
+
+## Impact Page Updates
+- [x] Update donation amount from 10M to 7M NOK
+- [x] Add full inspirational story about clean water mission
+- [x] Add voting competition explanation (every 2 years)
+- [x] Add personal journey section (founder travels to document)
+- [x] Update milestone timeline
