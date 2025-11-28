@@ -3,7 +3,7 @@ import { Users } from "lucide-react";
 
 export default function MemberCounterBanner() {
   // TODO: Replace with actual member count from database
-  const currentMembers = 12042;
+  const currentMembers = 0;
   const targetMembers = 15000;
   const progressPercentage = Math.round((currentMembers / targetMembers) * 100);
 

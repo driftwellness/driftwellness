@@ -455,3 +455,7 @@ Focus areas:
 - [x] Change section title from "This is Maria" to "Meet Your Guides"
 - [x] Update section layout to show both coaches side-by-side
 - [x] Add descriptions for both Maria and Zane
+
+## Member Counter Fix
+- [x] Change member counter from test data (15,042) to 0
+- [x] Update to show "0 / 15,000 members - 0% to clean water!"
