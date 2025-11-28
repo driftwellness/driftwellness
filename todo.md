@@ -448,3 +448,10 @@ Focus areas:
 - [x] Update chat interface to use selected coach
 - [x] Add "Switch Coach" button in AI Coach page
 - [ ] Update Home page "Meet Maria" section to "Meet Your Guides" with both coaches
+
+## Home Page - Meet Your Guides Section
+- [x] Replace Maria's portrait with new yoga image (coach-yoga.jpg)
+- [x] Add Zane portrait next to Maria
+- [x] Change section title from "This is Maria" to "Meet Your Guides"
+- [x] Update section layout to show both coaches side-by-side
+- [x] Add descriptions for both Maria and Zane

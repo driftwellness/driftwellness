@@ -255,55 +255,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Your Guide - Maria Section */}
+      {/* Meet Your Guides - Maria & Zane Section */}
       <section className="py-24 bg-gradient-to-b from-background to-card/30">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Maria Image */}
-            <div className="order-2 md:order-1">
-              <div className="relative">
-                <div className="absolute inset-0 bg-accent/20 rounded-3xl blur-3xl" />
-                <img 
-                  src="/amara-welcome-v2.jpg" 
-                  alt="Maria - Your Wellness Guide"
-                  className="relative rounded-3xl shadow-2xl w-full"
-                />
-              </div>
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/40 mb-4">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-sm font-medium">Meet Your Guides</span>
             </div>
-            
-            {/* Content */}
-            <div className="order-1 md:order-2 space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/40">
-                <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-medium">Meet Your Guide</span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold">
-                This is{" "}
-                <span className="text-accent">Maria</span>
-              </h2>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Your personal wellness companion on the journey to inner peace. Maria combines ancient wisdom with modern mindfulness to guide you through meditation, breathwork, and self-discovery.
-              </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                With her warm presence and intuitive guidance, Maria helps you navigate life's challenges and find moments of tranquility in your daily routine.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link href="/ai-coach">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                    Chat with Maria
-                  </Button>
-                </Link>
-                <Link href="/pricing">
-                  <Button size="lg" variant="outline">
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Choose Your{" "}
+              <span className="text-accent">Wellness Companion</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Two experienced guides, one journey. Select the coach that resonates with you.
+            </p>
+          </div>
+
+          {/* Coaches Grid */}
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Maria */}
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+              <CardContent className="p-0">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="absolute inset-0 bg-accent/10 group-hover:bg-accent/20 transition-colors" />
+                  <img 
+                    src="/maria-yoga.jpg" 
+                    alt="Maria - Your Wellness Guide"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-8 space-y-4">
+                  <h3 className="text-3xl font-bold">
+                    <span className="text-accent">Maria</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Warm, empathetic, and nurturing. Maria combines ancient wisdom with modern mindfulness to guide you through meditation, breathwork, and self-discovery with gentle compassion.
+                  </p>
+                  <Link href="/coach-selection">
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                      Choose Maria
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Zane */}
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+              <CardContent className="p-0">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="absolute inset-0 bg-accent/10 group-hover:bg-accent/20 transition-colors" />
+                  <img 
+                    src="/zane.jpg" 
+                    alt="Zane - Your Wellness Guide"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-8 space-y-4">
+                  <h3 className="text-3xl font-bold">
+                    <span className="text-accent">Zane</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Grounded, wise, and steady. Zane brings calm strength and practical wisdom to help you build resilience, find clarity, and navigate life's challenges with confidence.
+                  </p>
+                  <Link href="/coach-selection">
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                      Choose Zane
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
