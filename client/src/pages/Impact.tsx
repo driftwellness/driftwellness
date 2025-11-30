@@ -9,7 +9,7 @@ export default function Impact() {
   // TODO: Fetch real member count from database
   const currentMembers = 0;
   const goalMembers = 15000;
-  const donationAmount = 7000000; // 7 million NOK
+  const donationAmount = 35000000; // 35 million NOK over 5 years
   const progress = (currentMembers / goalMembers) * 100;
 
   return (
@@ -108,7 +108,7 @@ export default function Impact() {
             </p>
             
             <p>
-              Derfor har vi satt oss et dristig mål: å donere 7 millioner kroner for å gi de mest sårbare samfunnene tilgang til rent vann, sanitær og hygiene.
+              Derfor har vi satt oss et dristig mål: over de neste 5 årene skal vi donere 35 millioner kroner for å gi de mest sårbare samfunnene tilgang til rent vann, sanitær og hygiene. Dette er vår langsiktige visjon for å skape en bedre verden.
             </p>
             
             <p>
@@ -137,7 +137,7 @@ export default function Impact() {
                 </div>
                 <h3 className="font-bold text-lg">1. Innsamling av Forslag</h3>
                 <p className="text-sm text-muted-foreground">
-                  (1 uke) "Hva skal de 7 millionene støtte? Legg inn ditt forslag!"
+                  (1 uke) "Hva skal donasjonen støtte? Legg inn ditt forslag!"
                 </p>
               </CardContent>
             </Card>
@@ -184,7 +184,7 @@ export default function Impact() {
                     <span className="text-xl font-bold text-[#D4AF37]">1</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">15,000 medlemmer → 7M NOK til rent vann</h3>
+                    <h3 className="font-bold text-lg">15,000 medlemmer → First milestone donation</h3>
                     <p className="text-sm text-muted-foreground">
                       Første donasjon går til rent vann-prosjekter i sårbare samfunn
                     </p>
@@ -200,7 +200,7 @@ export default function Impact() {
                     <span className="text-xl font-bold text-[#8B4049]">2</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">30,000 medlemmer → 7M NOK til nytt prosjekt</h3>
+                    <h3 className="font-bold text-lg">30,000 medlemmer → Second milestone donation</h3>
                     <p className="text-sm text-muted-foreground">
                       Medlemmene velger! Stemmekonkurranse avgjør hva vi støtter
                     </p>
@@ -216,7 +216,7 @@ export default function Impact() {
                     <span className="text-xl font-bold text-[#D4AF37]">3</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">45,000 medlemmer → 7M NOK til nytt prosjekt</h3>
+                    <h3 className="font-bold text-lg">45,000 medlemmer → Third milestone donation</h3>
                     <p className="text-sm text-muted-foreground">
                       Ny stemmerunde! Fellesskapet bestemmer
                     </p>

@@ -463,3 +463,66 @@ Focus areas:
 ## Footer Update
 - [x] Remove "Operated by Heltentmerlivogel" from footer
 - [x] Keep company name in Privacy Policy and Terms of Service (legally required)
+
+## Sleep Videos Feature (Future Implementation)
+- [ ] Create "Sleep Videos" or "Sleep Nook" page
+- [ ] Add hero section with "Have Your Best Sleep" headline
+- [ ] Implement video gallery with 6 categories:
+
+### Video Categories:
+1. **Norwegian Nature** 🌲
+   - [ ] Find/create 8-hour Norwegian nature video
+   - [ ] Include bird chirping, forest sounds, streams
+   - [ ] Peaceful Norwegian landscape visuals
+
+2. **Cozy Cabin in Snow** ❄️
+   - [ ] Find/create cozy cabin with fireplace video
+   - [ ] Snow falling outside windows
+   - [ ] Warm, hygge atmosphere
+   - [ ] Crackling fire sounds
+
+3. **Tropical Rain** 🌴
+   - [ ] Find/create tropical rainforest video
+   - [ ] Rain on jungle leaves
+   - [ ] Tropical ambience sounds
+
+4. **Beach Brainwave Therapy** 🌊
+   - [ ] Find/create beach waves + binaural beats video
+   - [ ] Include Delta/Theta waves for deep sleep
+   - [ ] Healing frequencies (432Hz, 528Hz)
+   - [ ] Ocean waves visual + sound
+
+5. **Silent Aquarium** 🐠
+   - [ ] Find/create Red Sea/tropical aquarium video
+   - [ ] Colorful fish swimming peacefully
+   - [ ] NO SOUND - purely visual relaxation
+   - [ ] 8-hour loop
+
+6. **Starry Night Forest** 🌟
+   - [ ] Find/create POV looking up at stars through trees
+   - [ ] SOFT wind sounds in forest (gentle, not strong)
+   - [ ] Swaying tree branches against night sky
+   - [ ] Stars twinkling above
+   - [ ] Gentle, calming wind ambience
+
+### Technical Implementation:
+- [ ] Embed YouTube videos or host own videos
+- [ ] Create video player with controls
+- [ ] Add categories/filters
+- [ ] Implement fullscreen mode
+- [ ] Add to main navigation
+- [ ] Design card-based video gallery
+- [ ] Add video descriptions and duration labels
+
+## Donation Goal Update
+- [x] Update Impact page: Change from 7M NOK to 35M NOK
+- [x] Update timeline: 5-year goal (not immediate)
+- [x] Clarify: "Our 5-year mission: 35 million NOK to create a better world"
+- [ ] Update member counter banner with new goal context (optional - can be done later)
+
+## Mental Health Support Footer
+- [x] Add mental health helpline section to footer
+- [x] Use international resources (Befrienders Worldwide)
+- [x] Text: "If you're struggling with your mental health and need someone to talk to, please reach out. You're not alone."
+- [x] Link to befrienders.org for country-specific helplines
+- [x] Small text, bottom of footer with Heart icon

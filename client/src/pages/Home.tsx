@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { APP_TITLE, getLoginUrl } from "@/const";
-import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight, Gift, ShoppingBag } from "lucide-react";
+import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight, Gift, ShoppingBag, Heart } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -432,9 +432,31 @@ export default function Home() {
           </div>
 
           {/* Copyright */}
-          <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} {APP_TITLE}. All rights reserved.</p>
-            <p className="mt-2">Find your stillness. Create global change.</p>
+          <div className="pt-8 border-t border-border/50 text-center space-y-4">
+            <div className="text-sm text-muted-foreground">
+              <p>© {new Date().getFullYear()} {APP_TITLE}. All rights reserved.</p>
+              <p className="mt-2">Find your stillness. Create global change.</p>
+            </div>
+            
+            {/* Mental Health Support */}
+            <div className="text-xs text-muted-foreground/80 max-w-2xl mx-auto pt-4 border-t border-border/30">
+              <p className="mb-1">
+                <Heart className="inline w-3 h-3 mr-1" />
+                If you're struggling with your mental health and need someone to talk to, please reach out. You're not alone.
+              </p>
+              <p>
+                Visit{" "}
+                <a 
+                  href="https://www.befrienders.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="underline hover:text-foreground transition-colors"
+                >
+                  befrienders.org
+                </a>
+                {" "}to find a helpline in your country.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
