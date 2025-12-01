@@ -21,7 +21,7 @@ const pricingPlans = [
     ],
     icon: Sparkles,
     color: "text-accent",
-    buttonText: "Start Standard",
+    buttonText: "Start 7-Day Free Trial",
   },
   {
     id: "premium",
@@ -40,7 +40,7 @@ const pricingPlans = [
     ],
     icon: Crown,
     color: "text-primary",
-    buttonText: "Start Premium",
+    buttonText: "Start 7-Day Free Trial",
     popular: true,
     badge: "Most Popular",
   },
@@ -60,7 +60,7 @@ const pricingPlans = [
     ],
     icon: Crown,
     color: "text-[#D4AF37]",
-    buttonText: "Start Impact",
+    buttonText: "Start 7-Day Free Trial",
     badge: "Maximum Impact",
   },
 ];
@@ -94,8 +94,11 @@ export default function Pricing() {
           <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
             Choose Your Path
           </h1>
-          <p className="text-muted-foreground text-lg mb-8">
-            Start your journey to inner peace. Cancel anytime.
+          <p className="text-muted-foreground text-lg mb-2">
+            Start your journey to inner peace with a 7-day free trial.
+          </p>
+          <p className="text-sm text-muted-foreground/80 mb-8">
+            No credit card required. Cancel anytime.
           </p>
 
           {/* Billing Period Toggle */}

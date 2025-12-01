@@ -4,6 +4,9 @@ import { Card } from "@/components/ui/card";
 import { Play, Pause, SkipBack, SkipForward, Volume2, ArrowLeft } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Link } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { checkSubscriptionStatus, getTrialDaysRemaining } from "@/lib/subscription";
+import Paywall from "@/components/Paywall";
 
 const chapters = [
   {
@@ -44,6 +47,26 @@ const chapters = [
 ];
 
 export default function Audiobook() {
+  const { user } = useAuth();
+  
+  // Check subscription status
+  // TODO: Fetch actual subscription from database
+  const subscriptionStatus = checkSubscriptionStatus(user, null);
+  const trialDaysRemaining = getTrialDaysRemaining(user);
+
+  // Show paywall if user doesn't have access
+  if (!subscriptionStatus.canAccess) {
+    return (
+      <Paywall
+        title="Premium Audiobook"
+        description="Access all 5 guided meditation chapters with your Premium membership."
+        featureName="the full audiobook"
+        showTrialInfo={!user}
+        trialDaysRemaining={trialDaysRemaining}
+      />
+    );
+  }
+
   const [currentChapter, setCurrentChapter] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);

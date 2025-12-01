@@ -526,3 +526,23 @@ Focus areas:
 - [x] Text: "If you're struggling with your mental health and need someone to talk to, please reach out. You're not alone."
 - [x] Link to befrienders.org for country-specific helplines
 - [x] Small text, bottom of footer with Heart icon
+
+## Freemium Model + Paywall Implementation
+- [x] Create subscription check utility functions
+- [x] Add 7-day free trial logic
+- [x] Create Paywall/UpgradePrompt component
+- [x] Protect premium pages (Audiobook, AI Coach, Journal)
+- [ ] Protect remaining premium pages (Advent Calendar, Shop, Soundscapes)
+- [x] Allow free access to: Home, Impact, Pricing
+- [x] Update Pricing page with "Start 7-Day Free Trial" messaging
+- [x] Add admin role check (owner gets full access without payment)
+- [ ] Add "Upgrade to Premium" buttons throughout app
+- [ ] Show trial status in user dashboard/settings
+- [x] Block access after trial expires without subscription
+
+### Pricing Structure:
+- **Free**: Landing page + Impact page only
+- **Premium Trial**: 7 days free, then 199 kr/month
+- **Premium Monthly**: 199 kr/month
+- **Premium Yearly**: 1990 kr/year (save 398 kr)
+- **Admin**: Full access (no payment required)

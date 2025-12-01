@@ -4,6 +4,9 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft, Send, Sparkles, Heart, Zap, Moon, RefreshCw } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { checkSubscriptionStatus, getTrialDaysRemaining } from "@/lib/subscription";
+import Paywall from "@/components/Paywall";
 
 interface Message {
   id: number;
@@ -59,7 +62,26 @@ interface AICoachProps {
 }
 
 export default function AICoach({ selectedCoach = "maria" }: AICoachProps) {
+  const { user } = useAuth();
   const [, setLocation] = useLocation();
+  
+  // Check subscription status
+  const subscriptionStatus = checkSubscriptionStatus(user, null);
+  const trialDaysRemaining = getTrialDaysRemaining(user);
+
+  // Show paywall if user doesn't have access
+  if (!subscriptionStatus.canAccess) {
+    return (
+      <Paywall
+        title="AI Wellness Coach"
+        description="Get personalized guidance from Maria or Zane, your AI wellness companions."
+        featureName="AI coaching"
+        showTrialInfo={!user}
+        trialDaysRemaining={trialDaysRemaining}
+      />
+    );
+  }
+
   const [currentCoach, setCurrentCoach] = useState<"maria" | "zane">(selectedCoach);
   const coach = coachData[currentCoach];
   

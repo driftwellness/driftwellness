@@ -5,6 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, Plus, BookOpen, Heart, Frown, Smile, Meh } from "lucide-react";
 import { Link } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { checkSubscriptionStatus, getTrialDaysRemaining } from "@/lib/subscription";
+import Paywall from "@/components/Paywall";
 
 interface JournalEntry {
   id: number;
@@ -24,6 +27,25 @@ const moodIcons = {
 };
 
 export default function Journal() {
+  const { user } = useAuth();
+  
+  // Check subscription status
+  const subscriptionStatus = checkSubscriptionStatus(user, null);
+  const trialDaysRemaining = getTrialDaysRemaining(user);
+
+  // Show paywall if user doesn't have access
+  if (!subscriptionStatus.canAccess) {
+    return (
+      <Paywall
+        title="Private Journal"
+        description="Track your thoughts, moods, and wellness journey with unlimited journal entries."
+        featureName="the journal"
+        showTrialInfo={!user}
+        trialDaysRemaining={trialDaysRemaining}
+      />
+    );
+  }
+
   const [entries, setEntries] = useState<JournalEntry[]>([
     {
       id: 1,
