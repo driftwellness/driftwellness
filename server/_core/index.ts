@@ -7,6 +7,7 @@ import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import stripeRoutes from "../routes/stripe";
+import subscriptionRoutes from "../routes/subscription";
 import { serveStatic, setupVite } from "./vite";
 
 function isPortAvailable(port: number): Promise<boolean> {
@@ -38,6 +39,8 @@ async function startServer() {
   registerOAuthRoutes(app);
   // Stripe payment routes
   app.use("/api", stripeRoutes);
+  // Subscription management routes
+  app.use("/api/subscription", subscriptionRoutes);
   // tRPC API
   app.use(
     "/api/trpc",

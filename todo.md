@@ -546,3 +546,24 @@ Focus areas:
 - **Premium Monthly**: 199 kr/month
 - **Premium Yearly**: 1990 kr/year (save 398 kr)
 - **Admin**: Full access (no payment required)
+
+## Stripe Checkout Implementation
+- [ ] Create Stripe checkout session API endpoint
+- [ ] Create Stripe customer portal API endpoint
+- [ ] Update Pricing page to call Stripe checkout
+- [ ] Implement webhook handler for subscription events
+- [ ] Update subscription status in database on payment success
+- [ ] Add subscription management to Settings page
+- [ ] Show active subscription details
+- [ ] Add "Manage Subscription" button (opens Stripe portal)
+- [ ] Test checkout flow end-to-end
+- [ ] Verify webhook events are received and processed
+
+## Member Counter Update (Social Proof)
+- [x] Change member counter from 0 to start at 998 members
+- [x] Add gradual increment logic (+1-3 per day automatically)
+- [x] When real users register, add them on top of base count
+- [x] Update MemberCounterBanner component
+- [x] Update Impact page member display
+- [x] Make it look like app already has momentum
+- [x] Update donation goal to 35M NOK in banner

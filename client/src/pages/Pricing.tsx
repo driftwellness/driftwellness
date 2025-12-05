@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Check, Sparkles, Crown } from "lucide-react";
+import { ArrowLeft, Check, Sparkles, Crown, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 const pricingPlans = [
   {
@@ -66,16 +67,47 @@ const pricingPlans = [
 ];
 
 export default function Pricing() {
+  const { user } = useAuth();
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
+  const [loading, setLoading] = useState<string | null>(null);
 
-  const handleSubscribe = (planId: string) => {
-    // In production, this would redirect to Stripe Checkout
-    toast.info("Redirecting to payment...", {
-      description: "You'll be redirected to secure Stripe checkout",
-    });
+  const handleSubscribe = async (planId: string) => {
+    if (!user) {
+      toast.error("Please log in first", {
+        description: "You need to be logged in to subscribe",
+      });
+      return;
+    }
+
+    setLoading(planId);
     
-    // TODO: Implement Stripe checkout
-    // window.location.href = `/api/create-checkout-session?plan=${planId}&period=${billingPeriod}`;
+    try {
+      const response = await fetch('/api/subscription/create-subscription-checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          planId,
+          billingPeriod,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to create checkout session');
+      }
+
+      // Redirect to Stripe Checkout
+      window.location.href = data.url;
+    } catch (error: any) {
+      console.error('Checkout error:', error);
+      toast.error("Failed to start checkout", {
+        description: error.message || "Please try again later",
+      });
+      setLoading(null);
+    }
   };
 
   return (
@@ -187,6 +219,7 @@ export default function Pricing() {
                 {/* CTA Button */}
                 <Button
                   onClick={() => handleSubscribe(plan.id)}
+                  disabled={loading !== null}
                   className={`w-full ${
                     plan.popular
                       ? "bg-accent hover:bg-accent/90"
@@ -194,7 +227,14 @@ export default function Pricing() {
                   }`}
                   size="lg"
                 >
-                  {plan.buttonText}
+                  {loading === plan.id ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Processing...
+                    </>
+                  ) : (
+                    plan.buttonText
+                  )}
                 </Button>
               </Card>
             );
