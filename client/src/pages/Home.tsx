@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { APP_TITLE, getLoginUrl } from "@/const";
-import { Headphones, BookOpen, Calendar, Waves, Sparkles, ArrowRight, Gift, ShoppingBag, Heart } from "lucide-react";
+import { Headphones, BookOpen, Calendar, Waves, Sparkles, ShoppingBag, ArrowRight, Heart, Moon, Gift } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -488,6 +488,12 @@ const features = [
     title: "Real-time Soundscapes",
     description: "Mix your perfect ambient sound. Control rain, ocean waves, wind, and birdsong to create your sanctuary.",
     link: "/soundscapes",
+  },
+  {
+    icon: <Moon className="w-6 h-6" />,
+    title: "Sleep Videos",
+    description: "8-hour sleep videos with Norwegian nature, cozy cabins, tropical rain, beach waves, aquarium, and starry nights.",
+    link: "/sleep-videos",
   },
   {
     icon: <Sparkles className="w-6 h-6" />,

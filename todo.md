@@ -464,10 +464,15 @@ Focus areas:
 - [x] Remove "Operated by Heltentmerlivogel" from footer
 - [x] Keep company name in Privacy Policy and Terms of Service (legally required)
 
-## Sleep Videos Feature (Future Implementation)
-- [ ] Create "Sleep Videos" or "Sleep Nook" page
-- [ ] Add hero section with "Have Your Best Sleep" headline
-- [ ] Implement video gallery with 6 categories:
+## Sleep Videos Feature (COMPLETED)
+- [x] Research and find appropriate 8-hour videos for each category
+- [x] Create "Sleep Videos" page component
+- [x] Design page with "Have Your Best Sleep" heading
+- [x] Implement YouTube embedded video player
+- [x] Implement video gallery with 6 categories
+- [x] Add route and navigation
+- [x] Add to Home page features
+- [x] Protect with paywall (Premium required)
 
 ### Video Categories:
 1. **Norwegian Nature** 🌲

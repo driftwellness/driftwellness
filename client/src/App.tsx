@@ -19,6 +19,7 @@ import GiftCard from "./pages/GiftCard";
 import Pricing from "./pages/Pricing";
 import Shop from "./pages/Shop";
 import Soundscapes from "./pages/Soundscapes";
+import SleepVideos from "./pages/SleepVideos";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
 import CoachSelection from "./pages/CoachSelection";
@@ -50,6 +51,7 @@ function Router() {
       <Route path={"/checkout"} component={Checkout} />
       <Route path={"/order-success"} component={OrderSuccess} />
       <Route path={"/soundscapes"} component={Soundscapes} />
+      <Route path={"/sleep-videos"} component={SleepVideos} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
