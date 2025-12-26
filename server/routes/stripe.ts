@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import Stripe from 'stripe';
+import { handleStripeWebhook, verifyWebhookSignature } from '../_core/stripeWebhook';
 
 const router = Router();
 
@@ -70,6 +71,27 @@ router.get('/checkout-session/:sessionId', async (req, res) => {
   } catch (error: any) {
     console.error('Session retrieval error:', error);
     res.status(500).json({ error: error.message });
+  }
+});
+
+router.post('/webhook', async (req, res) => {
+  const signature = req.headers['stripe-signature'] as string;
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
+  if (!signature || !webhookSecret) {
+    console.error('Missing webhook signature or secret');
+    res.status(400).json({ error: 'Missing webhook configuration' });
+    return;
+  }
+
+  try {
+    const rawBody = (req as any).rawBody || JSON.stringify(req.body);
+    const event = await verifyWebhookSignature(rawBody, signature, webhookSecret);
+    await handleStripeWebhook(event);
+    res.json({ received: true });
+  } catch (error: any) {
+    console.error('Webhook error:', error);
+    res.status(400).json({ error: `Webhook Error: ${error.message}` });
   }
 });
 
