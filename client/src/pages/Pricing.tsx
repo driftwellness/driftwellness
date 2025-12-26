@@ -10,19 +10,17 @@ const pricingPlans = [
   {
     id: "standard",
     name: "Standard",
-    price: 199,
-    period: "month",
-    description: "Essential wellness tools for your daily practice",
+    price: 0,
+    period: "free",
+    description: "Get started with essential access",
     features: [
-      "5-chapter guided audiobook",
-      "Private journal with mood tracking",
-      "Access to advent calendar",
-      "Real-time soundscapes library",
+      "Chapter 1 of guided audiobook",
+      "New Year Calendar (31 days)",
       "Shop access with pre-orders",
     ],
     icon: Sparkles,
     color: "text-accent",
-    buttonText: "Start 7-Day Free Trial",
+    buttonText: "Get Started Free",
     priceId: undefined, // Standard is free
   },
   {
