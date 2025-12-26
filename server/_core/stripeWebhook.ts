@@ -2,6 +2,7 @@ import Stripe from 'stripe';
 import { getDb } from '../db';
 import { subscriptions } from '../../drizzle/schema';
 import { eq } from 'drizzle-orm';
+import { sendSubscriptionReceipt, sendPaymentFailedNotification } from './emailReceipts';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '');
 
@@ -75,6 +76,28 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
       status: 'active',
     });
 
+  // Determine plan name and donation amount
+  const planMap: Record<string, { name: string; price: number; donation: number }> = {
+    'req_oVa0P4RQRFd9la': { name: 'Standard', price: 0, donation: 0 },
+    'req_M6MWuNq2YYWSVQ': { name: 'Premium', price: 299, donation: 50 },
+    'req_wVuVfy6PQ32LaR': { name: 'Impact', price: 349, donation: 100 },
+  };
+
+  const planInfo = planMap[priceId] || { name: 'Unknown', price: 0, donation: 0 };
+  const now = new Date();
+  const endDate = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+
+  // Send receipt email
+  await sendSubscriptionReceipt({
+    userId: parseInt(userId),
+    planName: planInfo.name,
+    planPrice: planInfo.price,
+    transactionId: session.id,
+    billingPeriodStart: now,
+    billingPeriodEnd: endDate,
+    donationAmount: planInfo.donation > 0 ? planInfo.donation : undefined,
+  });
+
   console.log(`Subscription created for user ${userId} with price ${priceId}`);
 }
 
@@ -117,7 +140,33 @@ async function handleInvoicePaymentSucceeded(invoice: Stripe.Invoice) {
 
 async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
   console.log(`Payment failed for invoice ${invoice.id}`);
-  // Could send retry notification here
+  
+  // Find subscription and send notification
+  const db = await getDb();
+  if (!db) return;
+
+  try {
+    const subscriptionId = (invoice as any).subscription as string;
+    if (!subscriptionId) return;
+
+    const subscription = await db
+      .select()
+      .from(subscriptions)
+      .where(eq(subscriptions.stripeSubscriptionId, subscriptionId))
+      .limit(1);
+
+    if (subscription && subscription.length > 0) {
+      const planMap: Record<string, string> = {
+        'req_oVa0P4RQRFd9la': 'Standard',
+        'req_M6MWuNq2YYWSVQ': 'Premium',
+        'req_wVuVfy6PQ32LaR': 'Impact',
+      };
+      const planName = planMap[subscription[0].stripePriceId] || 'Unknown';
+      await sendPaymentFailedNotification(subscription[0].userId, planName);
+    }
+  } catch (error) {
+    console.error('Error handling payment failed:', error);
+  }
 }
 
 export async function verifyWebhookSignature(

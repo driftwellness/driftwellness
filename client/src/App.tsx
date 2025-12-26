@@ -26,6 +26,7 @@ import OrderSuccess from "./pages/OrderSuccess";
 import CoachSelection from "./pages/CoachSelection";
 import AdminDashboard from "./pages/AdminDashboard";
 import OurMission from "./pages/OurMission";
+import SubscriptionDashboard from "./pages/SubscriptionDashboard";
 import { useState } from "react";
 
 function Router() {
@@ -52,6 +53,7 @@ function Router() {
       <Route path={"/new-year-calendar"} component={NewYearCalendar} />
       <Route path={"/ gift-card"} component={GiftCard} />
       <Route path={"/pricing"} component={Pricing} />
+      <Route path={"/subscription"} component={SubscriptionDashboard} />
       <Route path={"/shop"} component={Shop} />
       <Route path={"/checkout"} component={Checkout} />
       <Route path={"/order-success"} component={OrderSuccess} />
