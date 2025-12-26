@@ -21,7 +21,7 @@ const pricingPlans = [
     icon: Sparkles,
     color: "text-accent",
     buttonText: "Get Started Free",
-    priceId: undefined, // Standard is free
+    priceId: import.meta.env.VITE_STRIPE_STANDARD_PRICE_ID,
   },
   {
     id: "premium",
