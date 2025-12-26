@@ -1,0 +1,22 @@
+{
+  "query": "SELECT id, email, name, role FROM users LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user PSSigazpgv4XcEw.root --database V3wXCRHnDzQL2RtY2j3x4F --execute SELECT id, email, name, role FROM users LIMIT 10",
+  "rows": [
+    {
+      "id": "1",
+      "email": "ylvamerlivogel@gmail.com",
+      "name": "ylvamerlivogel",
+      "role": "admin"
+    },
+    {
+      "id": "1050001",
+      "email": "kim.moe84@gmail.com",
+      "name": "Kim Moe",
+      "role": "user"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\temail\tname\trole\n1\tylvamerlivogel@gmail.com\tylvamerlivogel\tadmin\n1050001\tkim.moe84@gmail.com\tKim Moe\tuser\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

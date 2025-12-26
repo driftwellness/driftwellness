@@ -572,3 +572,23 @@ Focus areas:
 - [x] Update Impact page member display
 - [x] Make it look like app already has momentum
 - [x] Update donation goal to 35M NOK in banner
+
+## Admin Dashboard (Future - User Requested)
+- [ ] Create admin dashboard page (/admin)
+- [ ] Show total users count
+- [ ] Show paying members count
+- [ ] Show revenue statistics
+- [ ] List all users with subscription status
+- [ ] Ability to grant/revoke admin role
+- [ ] View journal entries (for support)
+- [ ] View AI Coach conversations
+- [ ] Manage shop orders
+- [ ] App settings management
+- [ ] Protect with admin-only access
+
+## New Year Calendar Update
+- [ ] Generate New Year Calendar images (fireworks theme, 31 days)
+- [ ] Show images to user for approval
+- [ ] Replace Advent Calendar with New Year Calendar
+- [ ] Update calendar styling and content for New Year theme
+- [ ] Update Shop opening date from Jan 1 to Feb 1

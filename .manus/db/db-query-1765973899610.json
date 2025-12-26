@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE users SET role = 'admin' WHERE LOWER(email) = LOWER('heltrent.vogel@gmail.com')",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user PSSigazpgv4XcEw.root --database V3wXCRHnDzQL2RtY2j3x4F --execute UPDATE users SET role = 'admin' WHERE LOWER(email) = LOWER('heltrent.vogel@gmail.com')",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 51
+}

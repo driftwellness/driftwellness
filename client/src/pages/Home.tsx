@@ -61,7 +61,7 @@ export default function Home() {
                       </svg>
                       <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />
-                        Shop (Opens Jan 1st)
+                        Shop (Opens Feb 1st)
                       </Button>
                     </div>
                   </Link>
@@ -83,7 +83,7 @@ export default function Home() {
                       </svg>
                       <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />
-                        Shop (Opens Jan 1st)
+                        Shop (Opens Feb 1st)
                       </Button>
                     </div>
                   </Link>
@@ -479,9 +479,9 @@ const features = [
   },
   {
     icon: <Calendar className="w-6 h-6" />,
-    title: "Advent Calendar",
-    description: "Daily wellness gifts throughout December. Meditations, exercises, and a chance to win premium prizes.",
-    link: "/advent-calendar",
+    title: "New Year Calendar",
+    description: "31 days of inspiration and motivation. Daily affirmations, wellness tips, and exclusive January rewards.",
+    link: "/new-year-calendar",
   },
   {
     icon: <Waves className="w-6 h-6" />,

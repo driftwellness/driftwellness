@@ -15,6 +15,7 @@ import Audiobook from "./pages/Audiobook";
 import Journal from "./pages/Journal";
 import AICoach from "./pages/AICoach";
 import AdventCalendar from "./pages/AdventCalendar";
+import NewYearCalendar from "./pages/NewYearCalendar";
 import GiftCard from "./pages/GiftCard";
 import Pricing from "./pages/Pricing";
 import Shop from "./pages/Shop";
@@ -45,6 +46,7 @@ function Router() {
         {() => <AICoach selectedCoach={selectedCoach} />}
       </Route>
       <Route path={"/advent-calendar"} component={AdventCalendar} />
+      <Route path={"/new-year-calendar"} component={NewYearCalendar} />
       <Route path={"/ gift-card"} component={GiftCard} />
       <Route path={"/pricing"} component={Pricing} />
       <Route path={"/shop"} component={Shop} />

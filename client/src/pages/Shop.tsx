@@ -262,7 +262,7 @@ export default function Shop() {
       <section className="bg-gradient-to-r from-[#8B4049] via-[#C97C5D] to-[#D4AF37] py-4">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white font-semibold text-lg sm:text-xl">
-            🎉 Pre-order Now - Ships <span className="font-bold">January 1st, 2026</span> ✨
+            🎉 Pre-order Now - Ships <span className="font-bold">February 1st, 2026</span> ✨
           </p>
           <p className="text-white/90 text-sm mt-1">
             Secure your favorites today! All orders ship starting New Year's Day.
@@ -373,7 +373,7 @@ export default function Shop() {
                       Add to Cart
                     </Button>
                     <p className="text-xs text-[#8B4049]/60 text-center">
-                      Ships January 1st, 2026
+                      Ships February 1st, 2026
                     </p>
                   </div>
                 </CardContent>
