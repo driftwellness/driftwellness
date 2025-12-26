@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Users } from "lucide-react";
 import NotificationBell from "./NotificationBell";
+import NavigationMenu from "./NavigationMenu";
 
 export default function MemberCounterBanner() {
   // Base member count for social proof (starts at 998)
@@ -35,6 +36,7 @@ export default function MemberCounterBanner() {
             </span>
           </div>
           <NotificationBell />
+          <NavigationMenu />
         </div>
       </div>
     </Link>
