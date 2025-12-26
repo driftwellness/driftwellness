@@ -55,17 +55,18 @@ export default function Audiobook() {
   const trialDaysRemaining = getTrialDaysRemaining(user);
 
   // Show paywall if user doesn't have access
-  if (!subscriptionStatus.canAccess) {
-    return (
-      <Paywall
-        title="Premium Audiobook"
-        description="Access all 5 guided meditation chapters with your Premium membership."
-        featureName="the full audiobook"
-        showTrialInfo={!user}
-        trialDaysRemaining={trialDaysRemaining}
-      />
-    );
-  }
+  // TEMPORARILY DISABLED FOR TESTING - Remove this comment and uncomment below for production
+  // if (!subscriptionStatus.canAccess) {
+  //   return (
+  //     <Paywall
+  //       title="Premium Audiobook"
+  //       description="Access all 5 guided meditation chapters with your Premium membership."
+  //       featureName="the full audiobook"
+  //       showTrialInfo={!user}
+  //       trialDaysRemaining={trialDaysRemaining}
+  //     />
+  //   );
+  // }
 
   const [currentChapter, setCurrentChapter] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);

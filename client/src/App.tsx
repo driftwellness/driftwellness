@@ -25,6 +25,7 @@ import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
 import CoachSelection from "./pages/CoachSelection";
 import AdminDashboard from "./pages/AdminDashboard";
+import OurMission from "./pages/OurMission";
 import { useState } from "react";
 
 function Router() {
@@ -35,6 +36,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path="/impact" component={Impact} />
+      <Route path="/our-mission" component={OurMission} />
       <Route path="/settings" component={Settings} />
       <Route path="/privacy" component={PrivacyPolicy} />
       <Route path="/terms" component={TermsOfService} />
