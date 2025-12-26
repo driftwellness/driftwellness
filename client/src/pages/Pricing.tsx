@@ -23,6 +23,7 @@ const pricingPlans = [
     icon: Sparkles,
     color: "text-accent",
     buttonText: "Start 7-Day Free Trial",
+    priceId: undefined, // Standard is free
   },
   {
     id: "premium",
@@ -41,9 +42,10 @@ const pricingPlans = [
     ],
     icon: Crown,
     color: "text-primary",
-    buttonText: "Start 7-Day Free Trial",
+    buttonText: "Subscribe Now",
     popular: true,
     badge: "Most Popular",
+    priceId: import.meta.env.VITE_STRIPE_PREMIUM_PRICE_ID,
   },
   {
     id: "impact",
@@ -61,8 +63,9 @@ const pricingPlans = [
     ],
     icon: Crown,
     color: "text-[#D4AF37]",
-    buttonText: "Start 7-Day Free Trial",
+    buttonText: "Subscribe Now",
     badge: "Maximum Impact",
+    priceId: import.meta.env.VITE_STRIPE_IMPACT_PRICE_ID,
   },
 ];
 
@@ -79,6 +82,14 @@ export default function Pricing() {
       return;
     }
 
+    const plan = pricingPlans.find(p => p.id === planId);
+    if (!plan?.priceId) {
+      toast.error("Invalid plan", {
+        description: "This plan is not available for purchase",
+      });
+      return;
+    }
+
     setLoading(planId);
     
     try {
@@ -89,6 +100,7 @@ export default function Pricing() {
         },
         body: JSON.stringify({
           planId,
+          priceId: plan.priceId,
           billingPeriod,
         }),
       });
