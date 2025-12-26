@@ -87,6 +87,17 @@ export default function NewYearCalendar() {
           </Button>
         </Link>
 
+        {/* Hero Image */}
+        <div className="max-w-md mx-auto mb-8">
+          <Card className="overflow-hidden border-accent/20 shadow-2xl">
+            <img
+              src="/new-year-calendar-1.jpg"
+              alt="New Year Calendar 2026"
+              className="w-full h-auto"
+            />
+          </Card>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">

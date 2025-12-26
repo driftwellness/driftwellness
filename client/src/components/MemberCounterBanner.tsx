@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Users } from "lucide-react";
+import NotificationBell from "./NotificationBell";
 
 export default function MemberCounterBanner() {
   // Base member count for social proof (starts at 998)
@@ -33,6 +34,7 @@ export default function MemberCounterBanner() {
               💧 35M NOK donation goal
             </span>
           </div>
+          <NotificationBell />
         </div>
       </div>
     </Link>
