@@ -24,6 +24,7 @@ import SleepVideos from "./pages/SleepVideos";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
 import CoachSelection from "./pages/CoachSelection";
+import AdminDashboard from "./pages/AdminDashboard";
 import { useState } from "react";
 
 function Router() {
@@ -54,6 +55,7 @@ function Router() {
       <Route path={"/order-success"} component={OrderSuccess} />
       <Route path={"/soundscapes"} component={Soundscapes} />
       <Route path={"/sleep-videos"} component={SleepVideos} />
+      <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

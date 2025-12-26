@@ -29,6 +29,13 @@
       "when": 1764357434884,
       "tag": "0003_milky_dorian_gray",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1766744474888,
+      "tag": "0004_normal_talon",
+      "breakpoints": true
     }
   ]
 }

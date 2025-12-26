@@ -1,7 +1,11 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
+import { getUserNotifications, markNotificationAsRead } from "./_core/emailNotifications";
+import { getDb } from "./db";
+import { users } from "../drizzle/schema";
+import { eq } from "drizzle-orm";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -17,12 +21,22 @@ export const appRouter = router({
     }),
   }),
 
-  // TODO: add feature routers here, e.g.
-  // todo: router({
-  //   list: protectedProcedure.query(({ ctx }) =>
-  //     db.getUserTodos(ctx.user.id)
-  //   ),
-  // }),
+  notifications: router({
+    list: protectedProcedure.query(async ({ ctx }) => {
+      return getUserNotifications(ctx.user.id, 20);
+    }),
+  }),
+
+  admin: router({
+    users: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new Error("Unauthorized");
+      }
+      const db = await getDb();
+      if (!db) return [];
+      return db.select().from(users).limit(100);
+    }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
