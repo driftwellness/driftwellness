@@ -27,6 +27,8 @@ import CoachSelection from "./pages/CoachSelection";
 import AdminDashboard from "./pages/AdminDashboard";
 import OurMission from "./pages/OurMission";
 import SubscriptionDashboard from "./pages/SubscriptionDashboard";
+import SubscriptionManagement from "./pages/SubscriptionManagement";
+import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 import { useState } from "react";
 
 function Router() {
@@ -54,12 +56,14 @@ function Router() {
       <Route path={"/ gift-card"} component={GiftCard} />
       <Route path={"/pricing"} component={Pricing} />
       <Route path={"/subscription"} component={SubscriptionDashboard} />
+      <Route path={"/subscription-management"} component={SubscriptionManagement} />
       <Route path={"/shop"} component={Shop} />
       <Route path={"/checkout"} component={Checkout} />
       <Route path={"/order-success"} component={OrderSuccess} />
       <Route path={"/soundscapes"} component={Soundscapes} />
       <Route path={"/sleep-videos"} component={SleepVideos} />
       <Route path={"/admin"} component={AdminDashboard} />
+      <Route path={"/analytics"} component={AnalyticsDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
