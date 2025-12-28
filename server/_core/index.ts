@@ -4,7 +4,7 @@ import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
-import { appRouter } from "../routers";
+import { appRouter, setupAnalyticsEndpoint } from "../routers";
 import { createContext } from "./context";
 import stripeRoutes from "../routes/stripe";
 import subscriptionRoutes from "../routes/subscription";
@@ -41,6 +41,8 @@ async function startServer() {
   app.use("/api", stripeRoutes);
   // Subscription management routes
   app.use("/api/subscription", subscriptionRoutes);
+  // Analytics endpoint
+  await setupAnalyticsEndpoint(app);
   // tRPC API
   app.use(
     "/api/trpc",
