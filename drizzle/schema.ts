@@ -26,6 +26,11 @@ export const users = mysqlTable("users", {
   
   // Stripe integration
   stripeCustomerId: varchar("stripeCustomerId", { length: 255 }).unique(),
+  
+  // Referral system
+  referralCode: varchar("referralCode", { length: 20 }),
+  referredBy: varchar("referredBy", { length: 20 }),
+  subscriptionStatus: varchar("subscriptionStatus", { length: 50 }).default("active"),
 });
 
 export type User = typeof users.$inferSelect;
@@ -195,3 +200,19 @@ export const emailLogs = mysqlTable("email_logs", {
 
 export type EmailLog = typeof emailLogs.$inferSelect;
 export type InsertEmailLog = typeof emailLogs.$inferInsert;
+
+/**
+ * Referrals table
+ * Tracks referral relationships between users
+ */
+export const referrals = mysqlTable("referrals", {
+  id: int("id").primaryKey().autoincrement(),
+  referrerId: int("referrerId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  
+  code: varchar("code", { length: 20 }).notNull().unique(),
+  
+  createdAt: timestamp("createdAt").notNull().defaultNow(),
+});
+
+export type Referral = typeof referrals.$inferSelect;
+export type InsertReferral = typeof referrals.$inferInsert;

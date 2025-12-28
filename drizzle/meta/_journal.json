@@ -36,6 +36,13 @@
       "when": 1766744474888,
       "tag": "0004_normal_talon",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1766840848052,
+      "tag": "0005_slow_eternity",
+      "breakpoints": true
     }
   ]
 }

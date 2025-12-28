@@ -29,6 +29,8 @@ import OurMission from "./pages/OurMission";
 import SubscriptionDashboard from "./pages/SubscriptionDashboard";
 import SubscriptionManagement from "./pages/SubscriptionManagement";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
+import UserProfile from "./pages/UserProfile";
+import ReferralSystem from "./pages/ReferralSystem";
 import { useState } from "react";
 
 function Router() {
@@ -64,6 +66,8 @@ function Router() {
       <Route path={"/sleep-videos"} component={SleepVideos} />
       <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/analytics"} component={AnalyticsDashboard} />
+      <Route path={"/profile"} component={UserProfile} />
+      <Route path={"/referral"} component={ReferralSystem} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
