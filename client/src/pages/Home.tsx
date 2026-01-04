@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import { APP_TITLE, getLoginUrl } from "@/const";
 import { Headphones, BookOpen, Calendar, Waves, Sparkles, ShoppingBag, ArrowRight, Heart, Moon, Gift } from "lucide-react";
 import { Link } from "wouter";
+import DownloadAppBanner from "@/components/DownloadAppBanner";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
 
   return (
     <div className="min-h-screen bg-background">
+      <DownloadAppBanner />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Warm sunset background */}
