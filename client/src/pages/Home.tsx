@@ -9,12 +9,16 @@ import GetAppButton from "@/components/GetAppButton";
 import TrustIndicators from "@/components/TrustIndicators";
 import ReferralBadge from "@/components/ReferralBadge";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import SocialMediaFeed from "@/components/SocialMediaFeed";
+import FlashSaleBanner from "@/components/FlashSaleBanner";
+import EmailSubscription from "@/components/EmailSubscription";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
 
   return (
     <div className="min-h-screen bg-background">
+      <FlashSaleBanner />
       <GetAppButton />
       <ExitIntentPopup />
       {/* Hero Section */}
@@ -343,6 +347,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Email Subscription Section */}
+      <EmailSubscription />
+
+      {/* Social Media Feed Section */}
+      <SocialMediaFeed />
 
       {/* CTA Section */}
       <section className="py-24">
