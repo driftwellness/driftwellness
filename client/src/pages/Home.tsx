@@ -6,6 +6,9 @@ import { APP_TITLE, getLoginUrl } from "@/const";
 import { Headphones, BookOpen, Calendar, Waves, Sparkles, ShoppingBag, ArrowRight, Heart, Moon, Gift } from "lucide-react";
 import { Link } from "wouter";
 import GetAppButton from "@/components/GetAppButton";
+import TrustIndicators from "@/components/TrustIndicators";
+import ReferralBadge from "@/components/ReferralBadge";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
@@ -13,6 +16,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <GetAppButton />
+      <ExitIntentPopup />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Warm sunset background */}
@@ -147,6 +151,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Trust Indicators Section */}
+      <TrustIndicators />
+
+      {/* Referral Badge */}
+      <ReferralBadge />
 
       {/* Featured Shop Section */}
       <section className="py-24 bg-background">
