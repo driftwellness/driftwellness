@@ -12,6 +12,7 @@ import ExitIntentPopup from "@/components/ExitIntentPopup";
 import SocialMediaFeed from "@/components/SocialMediaFeed";
 import FlashSaleBanner from "@/components/FlashSaleBanner";
 import EmailSubscription from "@/components/EmailSubscription";
+import SoundscapePlayer from "@/components/SoundscapePlayer";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
@@ -110,6 +111,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Soundscape Player Section */}
+      <SoundscapePlayer />
 
       {/* Features Section */}
       <section className="py-24 bg-card/30">
