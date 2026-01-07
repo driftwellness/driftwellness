@@ -11,7 +11,6 @@ import ReferralBadge from "@/components/ReferralBadge";
 
 import SocialMediaFeed from "@/components/SocialMediaFeed";
 import EmailSubscription from "@/components/EmailSubscription";
-import SoundscapePlayer from "@/components/SoundscapePlayer";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
@@ -110,8 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Soundscape Player Section */}
-      <SoundscapePlayer />
+      {/* Soundscape Player moved to /soundscapes page */}
 
       {/* Features Section */}
       <section className="py-24 bg-card/30">
