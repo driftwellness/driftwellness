@@ -93,6 +93,36 @@ const soundscapes: Soundscape[] = [
     imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
     color: 'from-slate-600/80 to-slate-900/80',
   },
+  {
+    id: 'white-noise',
+    name: 'White Noise',
+    description: 'Pure white noise for deep sleep and relaxation',
+    youtubeId: '9s3BnmSoXs4',
+    icon: '🤍',
+    duration: '8 hours',
+    imageUrl: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop',
+    color: 'from-gray-400/80 to-gray-600/80',
+  },
+  {
+    id: 'pink-noise',
+    name: 'Pink Noise',
+    description: 'Deeper and more soothing than white noise for better sleep',
+    youtubeId: '-f-JjmEtrvQ',
+    icon: '🎵',
+    duration: '9 hours',
+    imageUrl: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=400&fit=crop',
+    color: 'from-pink-500/80 to-pink-700/80',
+  },
+  {
+    id: 'delta-waves',
+    name: 'Delta Wave Sleep',
+    description: 'Brainwave entrainment music for deep healing sleep and recovery',
+    youtubeId: 'xQ6xgDI7Whc',
+    icon: '🧠',
+    duration: '8 hours',
+    imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=400&fit=crop',
+    color: 'from-purple-600/80 to-purple-900/80',
+  },
 ];
 
 export default function SoundscapePlayer() {
