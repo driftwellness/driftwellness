@@ -8,9 +8,8 @@ import { Link } from "wouter";
 import GetAppButton from "@/components/GetAppButton";
 import TrustIndicators from "@/components/TrustIndicators";
 import ReferralBadge from "@/components/ReferralBadge";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
+
 import SocialMediaFeed from "@/components/SocialMediaFeed";
-import FlashSaleBanner from "@/components/FlashSaleBanner";
 import EmailSubscription from "@/components/EmailSubscription";
 import SoundscapePlayer from "@/components/SoundscapePlayer";
 
@@ -19,9 +18,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <FlashSaleBanner />
       <GetAppButton />
-      <ExitIntentPopup />
+      {/* FlashSaleBanner and ExitIntentPopup removed to prevent overlapping */}
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Warm sunset background */}
