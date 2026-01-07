@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { APP_TITLE, getLoginUrl } from "@/const";
 import { Headphones, BookOpen, Calendar, Waves, Sparkles, ShoppingBag, ArrowRight, Heart, Moon, Gift } from "lucide-react";
 import { Link } from "wouter";
-import GetAppButton from "@/components/GetAppButton";
+import Header from "@/components/Header";
 import TrustIndicators from "@/components/TrustIndicators";
 import ReferralBadge from "@/components/ReferralBadge";
 
@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <GetAppButton />
+      <Header />
       {/* FlashSaleBanner and ExitIntentPopup removed to prevent overlapping */}
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
