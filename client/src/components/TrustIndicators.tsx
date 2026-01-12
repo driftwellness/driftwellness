@@ -43,7 +43,7 @@ export default function TrustIndicators() {
                 <Heart className="w-6 h-6 text-accent" />
               </div>
             </div>
-            <p className="text-3xl font-bold text-accent mb-2">35M</p>
+            <p className="text-3xl font-bold text-accent mb-2">10M</p>
             <p className="text-muted-foreground">NOK Donated</p>
             <p className="text-sm text-muted-foreground/70 mt-2">To clean water initiatives</p>
           </div>

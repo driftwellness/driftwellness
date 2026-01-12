@@ -17,7 +17,7 @@ export default function Impact() {
   
   const currentMembers = baseMemberCount + organicGrowth + realUsers;
   const goalMembers = 15000;
-  const donationAmount = 35000000; // 35 million NOK over 5 years
+  const donationAmount = 10000000; // 10 million NOK over 5 years
   const progress = (currentMembers / goalMembers) * 100;
 
   return (

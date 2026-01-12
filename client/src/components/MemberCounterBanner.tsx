@@ -32,7 +32,7 @@ export default function MemberCounterBanner() {
             <span className="hidden sm:inline">•</span>
             <span className="font-semibold">{progressPercentage}% to clean water!</span>
             <span className="ml-2 text-xs bg-white/20 px-2 py-1 rounded-full">
-              💧 35M NOK donation goal
+              💧 10M NOK donation goal
             </span>
           </div>
           <NotificationBell />
