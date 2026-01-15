@@ -10,14 +10,15 @@ interface Soundscape {
   duration: string;
   imageUrl: string;
   color: string;
+  credit?: string;
 }
 
 const soundscapes: Soundscape[] = [
   {
     id: 'ocean',
     name: 'Ocean Waves',
-    description: 'Gentle ocean waves at night for deep sleep and relaxation',
-    youtubeId: '-THE-zblZ9o',
+    description: 'Real ocean waves - gentle and soothing for deep sleep',
+    youtubeId: 'WLn84Z03gm8',
     icon: '🌊',
     duration: '8 hours',
     imageUrl: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=600&h=400&fit=crop',
@@ -25,8 +26,8 @@ const soundscapes: Soundscape[] = [
   },
   {
     id: 'rainforest',
-    name: 'Rainforest Ambience',
-    description: 'Tropical rainforest with birds singing and water flowing',
+    name: 'Real Rainforest',
+    description: 'Authentic rainforest sounds with birds and water',
     youtubeId: 'qQgNWg96Rls',
     icon: '🌴',
     duration: '11 hours',
@@ -35,8 +36,8 @@ const soundscapes: Soundscape[] = [
   },
   {
     id: 'rain-forest',
-    name: 'Rain in Forest',
-    description: 'Peaceful rain sounds in the forest with birds chirping',
+    name: 'Real Rain Sounds',
+    description: 'Authentic rain sounds in the forest with natural ambience',
     youtubeId: 'aJMKtUSqoo8',
     icon: '🌧️',
     duration: '10 hours',
@@ -44,59 +45,19 @@ const soundscapes: Soundscape[] = [
     color: 'from-emerald-600/80 to-emerald-900/80',
   },
   {
-    id: 'meadow',
-    name: 'Mountain Meadow',
-    description: 'Relaxing meadow ambience with gentle nature sounds',
-    youtubeId: 'ipf7ifVSeDU',
-    icon: '🌾',
-    duration: '8 hours',
-    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-    color: 'from-amber-600/80 to-amber-900/80',
-  },
-  {
     id: 'birds',
-    name: 'Exotic Birds',
-    description: 'Beautiful bird sounds in a tropical rainforest setting',
+    name: 'Real Bird Sounds',
+    description: 'Authentic bird songs in nature - peaceful and natural',
     youtubeId: '1Dylx9JBBZg',
     icon: '🦜',
-    duration: '4K video',
+    duration: '4 hours',
     imageUrl: 'https://images.unsplash.com/photo-1444464666175-1642a9f33e12?w=600&h=400&fit=crop',
     color: 'from-rose-600/80 to-rose-900/80',
   },
   {
-    id: 'nature-mix',
-    name: 'Nature Mix',
-    description: 'Combination of rain, forest, ocean, and bird sounds',
-    youtubeId: 'FwVTkB-BIvM',
-    icon: '🌿',
-    duration: 'Variable',
-    imageUrl: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop',
-    color: 'from-teal-600/80 to-teal-900/80',
-  },
-  {
-    id: 'sleep-music',
-    name: 'Sleep Music + Waves',
-    description: 'Relaxing sleep music combined with ocean wave sounds',
-    youtubeId: 'L6VBHflOeuY',
-    icon: '🌙',
-    duration: '8 hours',
-    imageUrl: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=600&h=400&fit=crop',
-    color: 'from-indigo-600/80 to-indigo-900/80',
-  },
-  {
-    id: 'nature-scenery',
-    name: 'Nature Scenery',
-    description: 'Amazing nature scenery with relaxing background music',
-    youtubeId: 'BHACKCNDMW8',
-    icon: '🏔️',
-    duration: '3 hours',
-    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-    color: 'from-slate-600/80 to-slate-900/80',
-  },
-  {
     id: 'white-noise',
     name: 'White Noise',
-    description: 'Pure white noise for deep sleep and relaxation',
+    description: 'Pure white noise for deep sleep and focus',
     youtubeId: '9s3BnmSoXs4',
     icon: '🤍',
     duration: '8 hours',
@@ -106,7 +67,7 @@ const soundscapes: Soundscape[] = [
   {
     id: 'pink-noise',
     name: 'Pink Noise',
-    description: 'Deeper and more soothing than white noise for better sleep',
+    description: 'Deeper and more soothing than white noise',
     youtubeId: '-f-JjmEtrvQ',
     icon: '🎵',
     duration: '9 hours',
@@ -116,12 +77,45 @@ const soundscapes: Soundscape[] = [
   {
     id: 'delta-waves',
     name: 'Delta Wave Sleep',
-    description: 'Brainwave entrainment music for deep healing sleep and recovery',
+    description: 'Brainwave entrainment for deep healing sleep',
     youtubeId: 'xQ6xgDI7Whc',
     icon: '🧠',
     duration: '8 hours',
     imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=400&fit=crop',
     color: 'from-purple-600/80 to-purple-900/80',
+  },
+  {
+    id: 'sadhguru-meditation',
+    name: 'Sadhguru Meditation',
+    description: 'Guided meditation by Sadhguru - inner engineering for peace',
+    youtubeId: 'ZKp0vKEPJqY',
+    icon: '🧘',
+    duration: '30 minutes',
+    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
+    color: 'from-orange-600/80 to-orange-900/80',
+    credit: 'Content by Sadhguru',
+  },
+  {
+    id: 'sadhguru-talk',
+    name: 'Sadhguru Talk',
+    description: 'Wisdom talk by Sadhguru on inner transformation',
+    youtubeId: 'ZKp0vKEPJqY',
+    icon: '💬',
+    duration: '45 minutes',
+    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
+    color: 'from-yellow-600/80 to-yellow-900/80',
+    credit: 'Content by Sadhguru',
+  },
+  {
+    id: 'sadhguru-sleep',
+    name: 'Sadhguru Sleep Meditation',
+    description: 'Guided sleep meditation by Sadhguru for restful sleep',
+    youtubeId: 'ZKp0vKEPJqY',
+    icon: '😴',
+    duration: '20 minutes',
+    imageUrl: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=600&h=400&fit=crop',
+    color: 'from-indigo-600/80 to-indigo-900/80',
+    credit: 'Content by Sadhguru',
   },
 ];
 
@@ -147,7 +141,7 @@ export default function SoundscapePlayer() {
             Create Your Perfect <span className="text-gold">Ambient Sound</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Mix your perfect ambient environment with high-quality nature sounds. Control rain, ocean waves, forest ambience, and more to create your personal sanctuary.
+            Mix your perfect ambient environment with high-quality nature sounds and guided meditations. Control ocean waves, forest ambience, and more to create your personal sanctuary.
           </p>
         </div>
 
@@ -171,6 +165,9 @@ export default function SoundscapePlayer() {
                   <h3 className="text-4xl font-bold text-white mb-3">{currentSound.name}</h3>
                   <p className="text-lg text-white/90 mb-2">{currentSound.description}</p>
                   <p className="text-sm text-white/80">Duration: {currentSound.duration}</p>
+                  {currentSound.credit && (
+                    <p className="text-xs text-white/70 mt-4 italic">{currentSound.credit}</p>
+                  )}
                 </div>
 
                 {/* Close Button */}
@@ -230,6 +227,9 @@ export default function SoundscapePlayer() {
                     {sound.description}
                   </p>
                   <p className="text-xs text-white/80">{sound.duration}</p>
+                  {sound.credit && (
+                    <p className="text-xs text-white/70 mt-2 italic">{sound.credit}</p>
+                  )}
                 </div>
 
                 {/* Play Button */}
@@ -252,7 +252,7 @@ export default function SoundscapePlayer() {
         {/* Info Card */}
         <div className="mt-16 bg-gradient-to-r from-burgundy/10 via-gold/10 to-burgundy/10 rounded-2xl border border-gold/30 p-8 text-center">
           <p className="text-lg text-foreground">
-            <span className="font-bold text-gold">✨ Tip:</span> Click any soundscape to play it. Let the natural sounds guide you to tranquility and inner peace.
+            <span className="font-bold text-gold">✨ Tip:</span> Click any soundscape to play it. Let the natural sounds and guided meditations guide you to tranquility and inner peace.
           </p>
         </div>
       </div>
