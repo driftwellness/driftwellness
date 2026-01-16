@@ -131,6 +131,8 @@ Focus areas:
 - [x] Create Privacy Policy (GDPR-compliant)
 - [x] Create Terms of Service
 - [x] Create Cookie Policy
+- [x] Add Privacy Policy page to app (/privacy route)
+- [x] Add Terms of Service page to app (/terms route)
 - [ ] Register domain name (drift.no, drift.com, or driftapp.com) - LATER
 - [ ] Register business entity (ENK or AS) - LATER
 - [ ] Set up Apple Developer Account ($99/year) - LATER
@@ -145,7 +147,7 @@ Focus areas:
 - [ ] Implement Stripe checkout for gift cards and mystery gifts
 - [ ] Create Stripe webhook handler for payment confirmations
 - [ ] Add subscription management to user dashboard
-- [ ] Test payment flow end-to-end
+- [x] Test payment flow end-to-end (checkout page working, Stripe integration confirmed)
 - [ ] Guide user through Stripe account setup and API key configuration
 
 ## Navigation & UX Improvements (Free)

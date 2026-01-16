@@ -215,6 +215,15 @@ importers:
       '@builder.io/vite-plugin-jsx-loc':
         specifier: ^0.1.1
         version: 0.1.1(vite@7.1.9(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.1)(tsx@4.20.6))
+      '@capacitor/android':
+        specifier: ^8.0.1
+        version: 8.0.1(@capacitor/core@8.0.1)
+      '@capacitor/core':
+        specifier: ^8.0.1
+        version: 8.0.1
+      '@capacitor/ios':
+        specifier: ^8.0.1
+        version: 8.0.1(@capacitor/core@8.0.1)
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.19(tailwindcss@4.1.14)
@@ -550,6 +559,19 @@ packages:
     resolution: {integrity: sha512-iAHFkaLBDJBC+EkGO1hF7hnIW2+oKKYVOl8NFAQH//3xeNEzvGdS9tOALRPR+JjR/M5NLyj+FG0VV7WFb1aJmw==}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0
+
+  '@capacitor/android@8.0.1':
+    resolution: {integrity: sha512-Mrk2MFKSg9YA4BPLKm03wwFnGKcvzNBERUTcxjW1NkLrF6YhJwygAT69f/YGopFvOhhqdnDPsuZuASUfmpkSpw==}
+    peerDependencies:
+      '@capacitor/core': ^8.0.0
+
+  '@capacitor/core@8.0.1':
+    resolution: {integrity: sha512-5UqSWxGMp/B8KhYu7rAijqNtYslhcLh+TrbfU48PfdMDsPfaU/VY48sMNzC22xL8BmoFoql/3SKyP+pavTOvOA==}
+
+  '@capacitor/ios@8.0.1':
+    resolution: {integrity: sha512-pDxwQtx3n07DBhRKFGvYh4g00ruIsT7HxPm6IIT+tJD8VuTNgwgWYmEOZzfHkG6mZuCe03KqCsuD+aVmg5Rctg==}
+    peerDependencies:
+      '@capacitor/core': ^8.0.0
 
   '@chevrotain/cst-dts-gen@11.0.3':
     resolution: {integrity: sha512-BvIKpRLeS/8UbfxXxgC33xOumsacaeCKAjAeLyOn7Pcp95HiRbrpl14S+9vaZLolnbssPIUuiUd8IvgkRyt6NQ==}
@@ -5015,6 +5037,18 @@ snapshots:
     dependencies:
       '@builder.io/jsx-loc-internals': 0.0.1
       vite: 7.1.9(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.1)(tsx@4.20.6)
+
+  '@capacitor/android@8.0.1(@capacitor/core@8.0.1)':
+    dependencies:
+      '@capacitor/core': 8.0.1
+
+  '@capacitor/core@8.0.1':
+    dependencies:
+      tslib: 2.8.1
+
+  '@capacitor/ios@8.0.1(@capacitor/core@8.0.1)':
+    dependencies:
+      '@capacitor/core': 8.0.1
 
   '@chevrotain/cst-dts-gen@11.0.3':
     dependencies:
