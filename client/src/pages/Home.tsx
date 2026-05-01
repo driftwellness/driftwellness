@@ -57,10 +57,12 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               {isAuthenticated ? (
                 <>
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
-                    Continue Your Journey
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link href="/pricing">
+                    <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
+                      Join Waitlist
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                   <Link href="/shop">
                     <div className="relative inline-block">
                       {/* Hand-drawn organic gold circle */}
@@ -81,7 +83,7 @@ export default function Home() {
                     className="bg-accent hover:bg-accent/90 text-accent-foreground"
                     onClick={() => window.location.href = getLoginUrl()}
                   >
-                    Get Started Free
+                    Join Waitlist
                   </Button>
                   <Link href="/shop">
                     <div className="relative inline-block">

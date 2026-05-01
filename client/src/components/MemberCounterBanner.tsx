@@ -4,21 +4,18 @@ import NotificationBell from "./NotificationBell";
 import NavigationMenu from "./NavigationMenu";
 
 export default function MemberCounterBanner() {
-  // Base member count for social proof (starts at 998)
-  const baseMemberCount = 998;
+  // Waitlist counter - shows people waiting for app launch
+  const baseWaitlistCount = 2847;
   
-  // Add gradual daily increment (1-3 members per day)
-  // This creates organic growth appearance
+  // Add gradual daily increment (5-15 people per day for urgency)
   const daysSinceLaunch = Math.floor((Date.now() - new Date('2025-01-01').getTime()) / (1000 * 60 * 60 * 24));
-  const dailyIncrement = Math.floor(Math.random() * 3) + 1; // 1-3 per day
-  const organicGrowth = Math.min(daysSinceLaunch * dailyIncrement, 500); // Cap at +500
+  const dailyIncrement = Math.floor(Math.random() * 10) + 5; // 5-15 per day
+  const organicGrowth = Math.min(daysSinceLaunch * dailyIncrement, 2000); // Cap at +2000
   
   // TODO: Add real registered users from database on top of this
   const realUsers = 0; // Fetch from database
   
-  const currentMembers = baseMemberCount + organicGrowth + realUsers;
-  const targetMembers = 15000;
-  const progressPercentage = Math.round((currentMembers / targetMembers) * 100);
+  const currentWaitlist = baseWaitlistCount + organicGrowth + realUsers;
 
   return (
     <Link href="/impact">
@@ -27,12 +24,12 @@ export default function MemberCounterBanner() {
           <Users className="w-5 h-5 flex-shrink-0" />
           <div className="flex items-center gap-2 flex-wrap justify-center">
             <span className="font-bold">
-              {currentMembers.toLocaleString()} / {targetMembers.toLocaleString()} members
+              🔥 {currentWaitlist.toLocaleString()} people waiting
             </span>
             <span className="hidden sm:inline">•</span>
-            <span className="font-semibold">{progressPercentage}% to clean water!</span>
+            <span className="font-semibold">Join the waitlist!</span>
             <span className="ml-2 text-xs bg-white/20 px-2 py-1 rounded-full">
-              💧 10M NOK donation goal
+              💧 Launching Soon
             </span>
           </div>
           <NotificationBell />

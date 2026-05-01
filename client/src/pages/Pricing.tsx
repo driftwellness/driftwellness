@@ -72,52 +72,15 @@ export default function Pricing() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
   const [loading, setLoading] = useState<string | null>(null);
 
-  const handleSubscribe = async (planId: string) => {
-    if (!user) {
-      toast.error("Please log in first", {
-        description: "You need to be logged in to subscribe",
-      });
-      return;
-    }
-
-    const plan = pricingPlans.find(p => p.id === planId);
-    if (!plan?.priceId) {
-      toast.error("Invalid plan", {
-        description: "This plan is not available for purchase",
-      });
-      return;
-    }
-
+  const handleJoinWaitlist = (planId: string) => {
     setLoading(planId);
     
-    try {
-      const response = await fetch('/api/subscription/create-subscription-checkout', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          planId,
-          priceId: plan.priceId,
-          billingPeriod,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to create checkout session');
-      }
-
-      // Redirect to Stripe Checkout
-      window.location.href = data.url;
-    } catch (error: any) {
-      console.error('Checkout error:', error);
-      toast.error("Failed to start checkout", {
-        description: error.message || "Please try again later",
+    setTimeout(() => {
+      toast.success("You're on the waitlist! 🎉", {
+        description: "We'll notify you as soon as Drift launches. Thanks for your interest!",
       });
       setLoading(null);
-    }
+    }, 500);
   };
 
   return (
@@ -137,35 +100,14 @@ export default function Pricing() {
             Choose Your Path
           </h1>
           <p className="text-muted-foreground text-lg mb-2">
-            Start your journey to inner peace with a 7-day free trial.
+            Join thousands waiting for Drift's launch.
           </p>
           <p className="text-sm text-muted-foreground/80 mb-8">
-            No credit card required. Cancel anytime.
+            Sign up for early access and exclusive launch benefits.
           </p>
 
-          {/* Billing Period Toggle */}
-          <div className="inline-flex items-center gap-4 p-1 bg-muted rounded-lg">
-            <button
-              onClick={() => setBillingPeriod("monthly")}
-              className={`px-6 py-2 rounded-md transition-all ${
-                billingPeriod === "monthly"
-                  ? "bg-background shadow-sm font-medium"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setBillingPeriod("yearly")}
-              className={`px-6 py-2 rounded-md transition-all ${
-                billingPeriod === "yearly"
-                  ? "bg-background shadow-sm font-medium"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Yearly
-              <span className="ml-2 text-xs text-green-600 font-medium">Save 20%</span>
-            </button>
+          <div className="inline-flex items-center gap-2 p-2 bg-accent/10 rounded-lg border border-accent/20">
+            <span className="text-sm font-medium text-accent">🚀 Launching Soon</span>
           </div>
         </div>
 
@@ -206,14 +148,12 @@ export default function Pricing() {
                 {/* Price */}
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold">{displayPrice} kr</span>
-                    <span className="text-muted-foreground">/ {displayPeriod}</span>
+                    <span className="text-4xl font-bold">{plan.price} kr</span>
+                    <span className="text-muted-foreground">/ {plan.period}</span>
                   </div>
-                  {billingPeriod === "yearly" && (
-                    <p className="text-sm text-green-600 font-medium mt-1">
-                      Save {plan.price * 12 - yearlyPrice} kr per year
-                    </p>
-                  )}
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Coming {plan.id === 'standard' ? 'immediately' : 'at launch'}
+                  </p>
                 </div>
 
                 {/* Features */}
@@ -228,7 +168,7 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <Button
-                  onClick={() => handleSubscribe(plan.id)}
+                  onClick={() => handleJoinWaitlist(plan.id)}
                   disabled={loading !== null}
                   className={`w-full ${
                     plan.popular
@@ -240,10 +180,10 @@ export default function Pricing() {
                   {loading === plan.id ? (
                     <>
                       <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      Processing...
+                      Joining...
                     </>
                   ) : (
-                    plan.buttonText
+                    "Join Waitlist"
                   )}
                 </Button>
               </Card>
