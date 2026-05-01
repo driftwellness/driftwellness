@@ -11,6 +11,7 @@ import ReferralBadge from "@/components/ReferralBadge";
 
 import SocialMediaFeed from "@/components/SocialMediaFeed";
 import EmailSubscription from "@/components/EmailSubscription";
+import HolderOurCalendar from "@/components/HolderOurCalendar";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
@@ -270,6 +271,13 @@ export default function Home() {
               Pre-order now • Ships January 1st, 2026
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Holder Our Calendar Section */}
+      <section className="py-24 bg-gradient-to-b from-card/30 to-background">
+        <div className="container max-w-6xl">
+          <HolderOurCalendar />
         </div>
       </section>
 

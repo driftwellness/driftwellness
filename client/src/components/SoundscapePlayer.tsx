@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Play, Pause, Volume2 } from 'lucide-react';
+import { Play, Pause, Volume2, Moon } from 'lucide-react';
+import SleepVideos from './SleepVideos';
 
 interface Soundscape {
   id: string;
@@ -25,22 +26,22 @@ const soundscapes: Soundscape[] = [
     color: 'from-blue-600/80 to-blue-900/80',
   },
   {
-    id: 'rainforest',
-    name: 'Real Rainforest',
-    description: 'Authentic rainforest sounds with birds and water',
-    youtubeId: 'qQgNWg96Rls',
-    icon: '🌴',
-    duration: '11 hours',
+    id: 'forest-sleep',
+    name: 'Deep Sleep Forest Soundscape',
+    description: 'Forest sounds with binaural beats for lucid dreaming and deep sleep',
+    youtubeId: 'yAuybpvAups',
+    icon: '🌲',
+    duration: '8 hours',
     imageUrl: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop',
     color: 'from-green-600/80 to-green-900/80',
   },
   {
-    id: 'rain-forest',
-    name: 'Real Rain Sounds',
-    description: 'Authentic rain sounds in the forest with natural ambience',
-    youtubeId: 'aJMKtUSqoo8',
-    icon: '🌧️',
-    duration: '10 hours',
+    id: 'forest-dreams',
+    name: 'Forest Dreams - Ambient Sleep',
+    description: 'Ambient deep sleep music with forest atmosphere and dark screen',
+    youtubeId: 'akPK9GkhQwQ',
+    icon: '🌙',
+    duration: '8 hours',
     imageUrl: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop',
     color: 'from-emerald-600/80 to-emerald-900/80',
   },
@@ -121,6 +122,7 @@ const soundscapes: Soundscape[] = [
 
 export default function SoundscapePlayer() {
   const [playing, setPlaying] = useState<string | null>(null);
+  const [sleepVideosOpen, setSleepVideosOpen] = useState(false);
 
   const handlePlay = (id: string) => {
     setPlaying(playing === id ? null : id);
@@ -133,9 +135,18 @@ export default function SoundscapePlayer() {
       <div className="container">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/20 text-gold border border-gold/40 mb-6">
-            <Volume2 className="w-4 h-4" />
-            <span className="text-sm font-semibold tracking-wide">Real-time Soundscapes</span>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/20 text-gold border border-gold/40">
+              <Volume2 className="w-4 h-4" />
+              <span className="text-sm font-semibold tracking-wide">Real-time Soundscapes</span>
+            </div>
+            <button
+              onClick={() => setSleepVideosOpen(true)}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/20 text-accent border border-accent/40 hover:bg-accent/30 transition-colors"
+            >
+              <Moon className="w-4 h-4" />
+              <span className="text-sm font-semibold tracking-wide">Sleep Videos</span>
+            </button>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             Create Your Perfect <span className="text-gold">Ambient Sound</span>
@@ -256,6 +267,9 @@ export default function SoundscapePlayer() {
           </p>
         </div>
       </div>
+
+      {/* Sleep Videos Modal */}
+      <SleepVideos isOpen={sleepVideosOpen} onClose={() => setSleepVideosOpen(false)} />
     </section>
   );
 }
