@@ -60,7 +60,7 @@ export default function Home() {
                 <>
                   <Link href="/pricing">
                     <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
-                      Join Waitlist
+                      Join Now
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
@@ -72,7 +72,7 @@ export default function Home() {
                       </svg>
                       <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />
-                        Shop (Opens Feb 1st)
+                        Shop Now
                       </Button>
                     </div>
                   </Link>
@@ -84,7 +84,7 @@ export default function Home() {
                     className="bg-accent hover:bg-accent/90 text-accent-foreground"
                     onClick={() => window.location.href = getLoginUrl()}
                   >
-                    Join Waitlist
+                    Join Now
                   </Button>
                   <Link href="/shop">
                     <div className="relative inline-block">
@@ -94,7 +94,7 @@ export default function Home() {
                       </svg>
                       <Button size="lg" variant="outline" className="relative gap-2 bg-background hover:bg-accent/10 border-transparent">
                         <ShoppingBag className="w-5 h-5" />
-                        Shop (Opens Feb 1st)
+                        Shop Now
                       </Button>
                     </div>
                   </Link>
@@ -188,7 +188,7 @@ export default function Home() {
             <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
               <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
                 <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
-                  Pre-order
+                  In stock
                 </Badge>
                 <img
                   src="/product-candle-beige-drift.jpg"
@@ -203,7 +203,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-xl font-bold text-accent">299 NOK</span>
-                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
+                  <span className="text-xs text-muted-foreground">Ships in 5–7 days</span>
                 </div>
               </CardContent>
             </Card>
@@ -212,7 +212,7 @@ export default function Home() {
             <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
               <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
                 <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
-                  Pre-order
+                  In stock
                 </Badge>
                 <img
                   src="/product-oils.jpg"
@@ -227,7 +227,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-xl font-bold text-accent">399 NOK</span>
-                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
+                  <span className="text-xs text-muted-foreground">Ships in 5–7 days</span>
                 </div>
               </CardContent>
             </Card>
@@ -236,7 +236,7 @@ export default function Home() {
             <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
               <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
                 <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
-                  Pre-order
+                  In stock
                 </Badge>
                 <img
                   src="/product-cushion-luxury-v2.jpg"
@@ -251,7 +251,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-xl font-bold text-accent">499 NOK</span>
-                  <span className="text-xs text-muted-foreground">Ships Jan 1st</span>
+                  <span className="text-xs text-muted-foreground">Ships in 5–7 days</span>
                 </div>
               </CardContent>
             </Card>
@@ -268,7 +268,7 @@ export default function Home() {
               </Button>
             </Link>
             <p className="text-sm text-muted-foreground mt-3">
-              Pre-order now • Ships January 1st, 2026
+              In stock now • Ships in 5–7 business days
             </p>
           </div>
         </div>

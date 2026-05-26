@@ -32,10 +32,10 @@ export default function OrderSuccess() {
         <CardContent className="space-y-6">
           <div className="text-center space-y-2">
             <p className="text-lg text-[#8B4049]">
-              Thank you for your pre-order! 🎉
+              Thank you for your order! 🎉
             </p>
             <p className="text-[#8B4049]/70">
-              Your order has been successfully placed and will be prepared for shipping starting January 1st, 2026.
+              Your order has been successfully placed and will be prepared with care.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function OrderSuccess() {
                 <h3 className="font-semibold text-[#8B4049] mb-1">What happens next?</h3>
                 <ul className="text-sm text-[#8B4049]/70 space-y-2">
                   <li>✅ You'll receive an order confirmation email shortly</li>
-                  <li>📦 Your order will be prepared starting January 1st, 2026</li>
+                  <li>📦 Your order will be prepared and packed within 1–2 business days</li>
                   <li>🚚 You'll receive a shipping notification with tracking info</li>
                   <li>💝 Your wellness essentials will arrive within 5-7 business days</li>
                 </ul>
