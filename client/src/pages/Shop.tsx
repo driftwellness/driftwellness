@@ -258,14 +258,14 @@ export default function Shop() {
         </div>
       </header>
 
-      {/* Launch Date Banner */}
+      {/* Active Shop Banner */}
       <section className="bg-gradient-to-r from-[#8B4049] via-[#C97C5D] to-[#D4AF37] py-4">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white font-semibold text-lg sm:text-xl">
-            🎉 Pre-order Now - Ships <span className="font-bold">February 1st, 2026</span> ✨
+            ✨ Shop Drift wellness essentials today ✨
           </p>
           <p className="text-white/90 text-sm mt-1">
-            Secure your favorites today! All orders ship starting New Year's Day.
+            Your favorites are ready to order. PayPal checkout will be connected in the final payment step.
           </p>
         </div>
       </section>
@@ -362,7 +362,7 @@ export default function Shop() {
                         {formatPrice(product.price)}
                       </span>
                       <Badge variant="outline" className="text-xs border-[#D4AF37] text-[#8B4049]">
-                        Pre-order
+                        In stock
                       </Badge>
                     </div>
                     <Button
@@ -373,7 +373,7 @@ export default function Shop() {
                       Add to Cart
                     </Button>
                     <p className="text-xs text-[#8B4049]/60 text-center">
-                      Ships February 1st, 2026
+                      Ships in 5–7 business days
                     </p>
                   </div>
                 </CardContent>

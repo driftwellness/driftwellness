@@ -56,29 +56,16 @@ export default function Checkout() {
     setIsProcessing(true);
 
     try {
-      // Create Stripe Checkout session
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          items: cartItems,
-          customerInfo: formData,
-        }),
+      // PayPal checkout will be connected in the final payment setup.
+      // For preview, keep the flow safe and do not call Stripe.
+      toast.success("PayPal checkout is ready for final setup ✨", {
+        description: "Add your PayPal Client ID / merchant setup, then this button can open live PayPal payment.",
       });
-
-      const { url } = await response.json();
-      
-      if (url) {
-        // Redirect to Stripe Checkout
-        window.location.href = url;
-      } else {
-        throw new Error('No checkout URL received');
-      }
+      setIsProcessing(false);
+      return;
     } catch (error) {
       console.error('Checkout error:', error);
-      toast.error("Payment failed. Please try again.");
+      toast.error("Payment could not be completed. PayPal checkout will be connected in the final payment setup.");
       setIsProcessing(false);
     }
   };
@@ -264,7 +251,7 @@ export default function Checkout() {
 
                 {/* Shipping Notice */}
                 <div className="bg-[#D4AF37]/10 rounded-lg p-3 text-sm text-[#8B4049]/80">
-                  📦 Pre-order ships January 1st, 2026
+                  📦 Ships in 5–7 business days after PayPal payment confirmation
                 </div>
 
                 {/* Checkout Button */}
@@ -273,11 +260,11 @@ export default function Checkout() {
                   disabled={isProcessing}
                   className="w-full bg-[#8B4049] hover:bg-[#8B4049]/90 text-white"
                 >
-                  {isProcessing ? "Processing..." : "Proceed to Payment"}
+                  {isProcessing ? "Processing..." : "Continue to PayPal"}
                 </Button>
 
                 <p className="text-xs text-center text-[#8B4049]/60">
-                  Secure payment powered by Stripe
+                  Secure PayPal payment will be connected before launch
                 </p>
               </CardContent>
             </Card>

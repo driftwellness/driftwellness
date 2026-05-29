@@ -9,19 +9,19 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-final.png",
+      "src": "/drift-app-logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-final.png",
+      "src": "/drift-app-logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-final.png",
+      "src": "/drift-app-logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -30,7 +30,7 @@
   "categories": ["health", "lifestyle", "wellness", "meditation"],
   "screenshots": [
     {
-      "src": "/sunset-bg.jpg",
+      "src": "/drift-app-logo.png",
       "sizes": "1280x720",
       "type": "image/jpeg",
       "form_factor": "wide"

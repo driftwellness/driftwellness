@@ -16,7 +16,7 @@ const pricingPlans = [
     features: [
       "Chapter 1 of guided audiobook",
       "New Year Calendar (31 days)",
-      "Shop access with pre-orders",
+      "Shop access and member-only wellness essentials",
     ],
     icon: Sparkles,
     color: "text-accent",
@@ -72,13 +72,19 @@ export default function Pricing() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
   const [loading, setLoading] = useState<string | null>(null);
 
-  const handleJoinWaitlist = (planId: string) => {
+  const handleJoinMembership = (planId: string) => {
     setLoading(planId);
-    
+
     setTimeout(() => {
-      toast.success("You're on the waitlist! 🎉", {
-        description: "We'll notify you as soon as Drift launches. Thanks for your interest!",
-      });
+      if (planId === "standard") {
+        toast.success("Welcome to Drift ✨", {
+          description: "Your free Drift access is ready. Premium membership can be connected to PayPal before launch.",
+        });
+      } else {
+        toast.success("PayPal membership checkout is next ✨", {
+          description: "The Drift design is ready. We will connect PayPal as the payment provider at the final payment step.",
+        });
+      }
       setLoading(null);
     }, 500);
   };
@@ -100,14 +106,14 @@ export default function Pricing() {
             Choose Your Path
           </h1>
           <p className="text-muted-foreground text-lg mb-2">
-            Join thousands waiting for Drift's launch.
+            Join 1,000+ members inside Drift's sanctuary.
           </p>
           <p className="text-sm text-muted-foreground/80 mb-8">
-            Sign up for early access and exclusive launch benefits.
+            Choose your membership and begin your wellness journey today.
           </p>
 
           <div className="inline-flex items-center gap-2 p-2 bg-accent/10 rounded-lg border border-accent/20">
-            <span className="text-sm font-medium text-accent">🚀 Launching Soon</span>
+            <span className="text-sm font-medium text-accent">✨ Membership open now • PayPal checkout next</span>
           </div>
         </div>
 
@@ -152,7 +158,7 @@ export default function Pricing() {
                     <span className="text-muted-foreground">/ {plan.period}</span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Coming {plan.id === 'standard' ? 'immediately' : 'at launch'}
+                    Available today
                   </p>
                 </div>
 
@@ -168,7 +174,7 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <Button
-                  onClick={() => handleJoinWaitlist(plan.id)}
+                  onClick={() => handleJoinMembership(plan.id)}
                   disabled={loading !== null}
                   className={`w-full ${
                     plan.popular
@@ -180,10 +186,10 @@ export default function Pricing() {
                   {loading === plan.id ? (
                     <>
                       <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      Joining...
+                      Preparing...
                     </>
                   ) : (
-                    "Join Waitlist"
+                    "Join Now"
                   )}
                 </Button>
               </Card>
@@ -204,7 +210,7 @@ export default function Pricing() {
             <div>
               <h3 className="font-semibold mb-1">What payment methods do you accept?</h3>
               <p className="text-muted-foreground text-sm">
-                We accept all major credit cards, Apple Pay, and Google Pay through our secure payment processor Stripe.
+                PayPal will be connected as the primary payment method before launch. Stripe can be added later if you want more options.
               </p>
             </div>
             <div>
