@@ -112,287 +112,153 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Soundscape Player moved to /soundscapes page */}
-
-      {/* Features Section */}
-      <section className="py-24 bg-card/30">
+      {/* App Doors Section */}
+      <section className="py-20 bg-card/30">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Everything you need to{" "}
-              <span className="text-accent">discover inner peace</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Drift blends guided wisdom, intelligent personalization, and serene soundscapes in perfect harmony
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {features.map((feature, idx) => {
-              const cardContent = (
-                <Card 
-                  className="group bg-card/50 backdrop-blur border-border/50 hover:border-accent/50 transition-all hover:shadow-lg hover:shadow-accent/5 h-full cursor-pointer"
-                >
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold">{feature.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-              
-              return feature.link ? (
-                <Link key={idx} href={feature.link} className="block">
-                  {cardContent}
-                </Link>
-              ) : (
-                <div key={idx}>
-                  {cardContent}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Indicators Section */}
-      <TrustIndicators />
-
-      {/* Referral Badge */}
-      <ReferralBadge />
-
-      {/* Featured Shop Section */}
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/40 mb-4">
-              <ShoppingBag className="w-4 h-4" />
-              <span className="text-sm font-medium">Curated by Maria</span>
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/20 text-accent border border-accent/40 mb-5">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-sm font-medium tracking-wide">Open your sanctuary</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Wellness{" "}
-              <span className="text-accent">Essentials</span>
+              Choose a <span className="text-accent">door</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Handpicked products to enhance your mindfulness practice and bring serenity to your daily rituals
+              Everything in Drift is organized into calm, simple doors. Tap the one you need today.
             </p>
           </div>
 
-          {/* Featured Products Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
-            {/* Product 1: Serenity Candle */}
-            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
-                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
-                  In stock
-                </Badge>
-                <img
-                  src="/product-candle-beige-drift.jpg"
-                  alt="Serenity Candle"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <CardContent className="p-4 space-y-2">
-                <h3 className="font-semibold text-lg">Serenity Candle</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-                  Hand-poured soy wax with calming lavender and vanilla
-                </p>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-xl font-bold text-accent">299 NOK</span>
-                  <span className="text-xs text-muted-foreground">Ships in 5–7 days</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Product 2: Essential Oils */}
-            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
-                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
-                  In stock
-                </Badge>
-                <img
-                  src="/product-oils.jpg"
-                  alt="Essential Oils Set"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <CardContent className="p-4 space-y-2">
-                <h3 className="font-semibold text-lg">Essential Oils Set</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-                  Pure lavender, eucalyptus, and peppermint oils
-                </p>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-xl font-bold text-accent">399 NOK</span>
-                  <span className="text-xs text-muted-foreground">Ships in 5–7 days</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Product 3: Meditation Cushion */}
-            <Card className="group overflow-hidden border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-card to-muted">
-                <Badge className="absolute top-3 right-3 bg-accent/90 text-accent-foreground z-10">
-                  In stock
-                </Badge>
-                <img
-                  src="/product-cushion-luxury-v2.jpg"
-                  alt="Meditation Cushion"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <CardContent className="p-4 space-y-2">
-                <h3 className="font-semibold text-lg">Meditation Cushion</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-                  Grey-blue velvet with floral embroidery
-                </p>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-xl font-bold text-accent">499 NOK</span>
-                  <span className="text-xs text-muted-foreground">Ships in 5–7 days</span>
-                </div>
-              </CardContent>
-            </Card>
-
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
+            {appDoors.map((door, idx) => (
+              <Link key={door.title} href={door.link} className="block h-full">
+                <Card className="group relative overflow-hidden h-full min-h-[230px] border-border/50 bg-background/75 backdrop-blur hover:border-accent/70 hover:shadow-xl hover:shadow-accent/10 transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <CardContent className="relative z-10 p-6 h-full flex flex-col">
+                    <div className="flex items-start justify-between gap-4 mb-8">
+                      <div className="w-12 h-12 rounded-2xl bg-accent/15 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        {door.icon}
+                      </div>
+                      <span className="text-4xl font-serif text-accent/25">{String(idx + 1).padStart(2, "0")}</span>
+                    </div>
+                    <div className="mt-auto space-y-3">
+                      <h3 className="text-2xl font-bold">{door.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{door.description}</p>
+                      <div className="inline-flex items-center text-sm font-semibold text-accent pt-2">
+                        Open door
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
-
-          {/* Explore Shop Button */}
-          <div className="text-center">
-            <Link href="/shop">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
-                <ShoppingBag className="w-5 h-5" />
-                Explore Full Collection
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-            <p className="text-sm text-muted-foreground mt-3">
-              In stock now • Ships in 5–7 business days
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Holder Our Calendar Section */}
-      <section className="py-24 bg-gradient-to-b from-card/30 to-background">
-        <div className="container max-w-6xl">
-          <HolderOurCalendar />
         </div>
       </section>
 
       {/* Meet Your Guides - Maria & Zane Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-card/30">
+      <section className="py-20 bg-gradient-to-b from-background to-card/30">
         <div className="container">
-          {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/40 mb-4">
               <Sparkles className="w-4 h-4" />
               <span className="text-sm font-medium">Meet Your Guides</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Choose Your{" "}
-              <span className="text-accent">Wellness Companion</span>
+              Maria & <span className="text-accent">Zane</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Two experienced guides, one journey. Select the coach that resonates with you.
+              Choose the energy you need: Maria for soft nurturing guidance, Zane for grounded clarity and strength.
             </p>
           </div>
 
-          {/* Coaches Grid */}
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Maria */}
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-              <CardContent className="p-0">
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <div className="absolute inset-0 bg-accent/10 group-hover:bg-accent/20 transition-colors" />
-                  <img 
-                    src="/maria-yoga.jpg" 
-                    alt="Maria - Your Wellness Guide"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-8 space-y-4">
-                  <h3 className="text-3xl font-bold">
-                    <span className="text-accent">Maria</span>
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Warm, empathetic, and nurturing. Maria combines ancient wisdom with modern mindfulness to guide you through meditation, breathwork, and self-discovery with gentle compassion.
-                  </p>
-                  <Link href="/coach-selection">
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                      Choose Maria
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Zane */}
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-              <CardContent className="p-0">
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <div className="absolute inset-0 bg-accent/10 group-hover:bg-accent/20 transition-colors" />
-                  <img 
-                    src="/zane.jpg" 
-                    alt="Zane - Your Wellness Guide"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-8 space-y-4">
-                  <h3 className="text-3xl font-bold">
-                    <span className="text-accent">Zane</span>
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Grounded, wise, and steady. Zane brings calm strength and practical wisdom to help you build resilience, find clarity, and navigate life's challenges with confidence.
-                  </p>
-                  <Link href="/coach-selection">
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                      Choose Zane
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {guides.map((guide) => (
+              <Link key={guide.name} href="/coach-selection" className="block h-full">
+                <Card className="overflow-hidden h-full hover:shadow-2xl hover:border-accent/60 transition-all duration-300 group bg-background/80">
+                  <CardContent className="p-0">
+                    <div className="grid sm:grid-cols-[0.9fr_1.1fr] h-full">
+                      <div className="relative min-h-[280px] overflow-hidden bg-accent/10">
+                        <img
+                          src={guide.image}
+                          alt={`${guide.name} - Your Wellness Guide`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-7 flex flex-col justify-center space-y-4">
+                        <Badge className="w-fit bg-accent/15 text-accent border border-accent/30 hover:bg-accent/20">
+                          {guide.badge}
+                        </Badge>
+                        <h3 className="text-4xl font-bold text-accent">{guide.name}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{guide.description}</p>
+                        <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                          Choose {guide.name}
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Email Subscription Section */}
-      <EmailSubscription />
-
-      {/* Social Media Feed Section */}
-      <SocialMediaFeed />
-
-      {/* CTA Section */}
-      <section className="py-24">
+      {/* Focused Shop Preview */}
+      <section className="py-20 bg-background">
         <div className="container">
-          <Card className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 border-accent/20">
-            <CardContent className="p-12 text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Ready to embrace serenity?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                Join a global community discovering their path to inner tranquility
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/pricing">
-                  <Button 
-                    size="lg" 
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                  >
-                    Start Your Free Journey
+          <Card className="max-w-5xl mx-auto overflow-hidden border-accent/20 bg-gradient-to-br from-accent/10 via-background to-primary/10">
+            <CardContent className="p-8 md:p-12 grid md:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+              <div className="space-y-5">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/40">
+                  <ShoppingBag className="w-4 h-4" />
+                  <span className="text-sm font-medium">Wellness essentials</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold">
+                  A calm shop, not a crowded shelf
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Candles, oils, cushions, jewelry and ritual wear are gathered in one simple shop door.
+                </p>
+                <Link href="/shop">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
+                    Open Shop
+                    <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
-                <Link href="/gift-card">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                    <Gift className="mr-2 h-4 w-4" />
-                    Buy Gift Card
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <img src="/product-candle-beige-drift.jpg" alt="Serenity Candle" className="rounded-3xl aspect-square object-cover shadow-lg" />
+                <img src="/product-oils.jpg" alt="Essential Oils" className="rounded-3xl aspect-square object-cover shadow-lg mt-8" />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <TrustIndicators />
+
+      {/* Simple CTA Section */}
+      <section className="py-20">
+        <div className="container">
+          <Card className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 border-accent/20">
+            <CardContent className="p-10 md:p-12 text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Ready to enter Drift?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+                Start with one door today. Your sanctuary can grow with you.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link href="/pricing">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto">
+                    Join Now
                   </Button>
                 </Link>
                 <Link href="/shop">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto border-accent text-accent hover:bg-accent/10">
-                    Explore Shop
+                    Shop Now
                   </Button>
                 </Link>
               </div>
@@ -496,47 +362,70 @@ export default function Home() {
   );
 }
 
-const features = [
+const appDoors = [
   {
     icon: <Headphones className="w-6 h-6" />,
-    title: "Guided Audiobook",
-    description: "5 chapters of mindfulness teachings, breathwork, and self-care practices narrated with a calming voice.",
+    title: "Audiobook",
+    description: "Guided chapters for breath, stillness and soft self-discovery.",
     link: "/audiobook",
   },
   {
     icon: <BookOpen className="w-6 h-6" />,
-    title: "Private Journal",
-    description: "A safe space to write your thoughts, dreams, and reflections. Powered by AI dream analysis.",
+    title: "Journal",
+    description: "Write privately, reflect gently and return to yourself.",
     link: "/journal",
   },
   {
     icon: <Calendar className="w-6 h-6" />,
-    title: "New Year Calendar",
-    description: "31 days of inspiration and motivation. Daily affirmations, wellness tips, and exclusive January rewards.",
+    title: "Calendar",
+    description: "Daily inspiration, rituals and small wellness surprises.",
     link: "/new-year-calendar",
   },
   {
     icon: <Waves className="w-6 h-6" />,
-    title: "Real-time Soundscapes",
-    description: "Mix your perfect ambient sound. Control rain, ocean waves, wind, and birdsong to create your sanctuary.",
+    title: "Soundscapes",
+    description: "Mix rain, ocean, wind and birds into your own calm atmosphere.",
     link: "/soundscapes",
   },
   {
     icon: <Moon className="w-6 h-6" />,
-    title: "Sleep Videos",
-    description: "8-hour sleep videos with Norwegian nature, cozy cabins, tropical rain, beach waves, aquarium, and starry nights.",
+    title: "Sleep",
+    description: "Long-form sleep videos and calm night rituals for deeper rest.",
     link: "/sleep-videos",
   },
   {
     icon: <Sparkles className="w-6 h-6" />,
-    title: "AI Wellness Coach",
-    description: "Your personal AI guide. Chat anytime, get daily reminders, and receive personalized wellness recommendations.",
-    link: "/ai-coach",
+    title: "AI Coach",
+    description: "Talk with Maria or Zane when you need guidance, clarity or care.",
+    link: "/coach-selection",
   },
   {
-    icon: <Headphones className="w-6 h-6" />,
-    title: "Sleep Music Library",
-    description: "Curated music for deep rest. Includes special sections for babies and children.",
-    link: null,
+    icon: <ShoppingBag className="w-6 h-6" />,
+    title: "Shop",
+    description: "Wellness essentials gathered in one clean, calm collection.",
+    link: "/shop",
+  },
+  {
+    icon: <Gift className="w-6 h-6" />,
+    title: "Membership",
+    description: "Choose your Drift path and unlock the full sanctuary.",
+    link: "/pricing",
+  },
+];
+
+const guides = [
+  {
+    name: "Maria",
+    badge: "Soft guidance",
+    image: "/maria-yoga.jpg",
+    description:
+      "Warm, empathetic and nurturing. Maria is for the days when you need softness, breathwork and gentle emotional support.",
+  },
+  {
+    name: "Zane",
+    badge: "Grounded clarity",
+    image: "/zane.jpg",
+    description:
+      "Steady, wise and grounding. Zane is for the days when you need focus, confidence and calm strength.",
   },
 ];
